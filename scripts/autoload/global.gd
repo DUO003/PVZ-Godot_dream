@@ -100,6 +100,10 @@ var CardInfo = {
 		CardInfoAttribute.CoolTime: 2.0,
 		CardInfoAttribute.SunCost: 125
 		},
+	PlantType.dmsfss: {
+		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.SunCost: 125
+		},
 }
 
 
@@ -123,6 +127,8 @@ enum PlantType {
 	ScaredyShroom,
 	IceShroom,
 	DoomShroom,
+	#杂交版本
+	dmsfss,
 	}
 
 var PlantTypeSceneMap = {
@@ -142,6 +148,7 @@ var PlantTypeSceneMap = {
 	PlantType.ScaredyShroom: preload("res://scenes/character/plant/014_scaredy_shroom.tscn"),
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom.tscn"),
+	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_dmsfss.tscn"),
 }
 
 var StaticPlantTypeSceneMap = {
@@ -161,6 +168,7 @@ var StaticPlantTypeSceneMap = {
 	PlantType.ScaredyShroom: preload("res://scenes/character/plant/014_scaredy_shroom_static.tscn"),
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom_static.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom_static.tscn"),
+	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_kp_dmsfss.tscn"),
 }
 
 #endregion
@@ -292,6 +300,7 @@ var curr_plant = [
 	PlantType.ScaredyShroom,
 	PlantType.IceShroom,
 	PlantType.DoomShroom,
+	PlantType.dmsfss,
 ]
 
 

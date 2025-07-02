@@ -11,6 +11,8 @@ class_name BulletPea
 @export var bullet_mode : Global.BulletMode
 
 @export var bullet_effect: BulletEffect
+# 最大随机偏移量 (像素)
+@export var max_random_offset: Vector2 = Vector2(randf_range(-5, 5),randf_range(-5, 5))
 
 ## 子弹移动离出生点最大距离
 @export var max_distance := 2000.0
@@ -23,6 +25,7 @@ var screen_rect: Rect2
 func _ready() -> void:
 	# 必须在 ready 后才能安全获取视口尺寸
 	screen_rect = get_viewport_rect().grow(500)
+	
 	# 安全获取BulletEffect节点并验证类型
 	if has_node("BulletEffect"):
 		var effect_node = $BulletEffect
@@ -32,15 +35,26 @@ func _ready() -> void:
 		# 可以选择禁用子弹效果或使用默认值
 		bullet_effect = null
 	
+	# 记录初始位置
+	start_pos = global_position
+	
+	
+func apply_random_offset():
+	# 计算随机偏移
+	var offset = max_random_offset
+	# 应用偏移到当前位置
+	position += offset
+	# 更新初始位置记录，确保与偏移后的位置一致
+	start_pos = global_position
+	
 func _process(delta: float) -> void:
 	# 每帧移动子弹
 	position += direction * speed * delta
-	
-		# 新增：移动超过250像素后销毁
+	# 检查是否超过最大距离
 	if global_position.distance_to(start_pos) > max_distance:
 		queue_free()
 
-	
+	# 检查是否超出屏幕范围
 	if not screen_rect.has_point(global_position):
 		queue_free()
 		
@@ -59,7 +73,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _attack_zombie(zombie:ZombieBase):
 	#被攻击
 	zombie.be_attacked_bullet(attack_value, bullet_mode)
-
 
 
 # 更换节点父节点

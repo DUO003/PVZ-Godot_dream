@@ -71,225 +71,224 @@ position = Vector2(41, 70)
 texture = ExtResource("1_0g7ir")
 
 [node name="Backleaf" type="Sprite2D" parent="Body"]
-position = Vector2(27.5, 54.1134)
-scale = Vector2(0.606866, 0.512496)
+position = Vector2(27.7, 53.5418)
+scale = Vector2(0.560523, 0.530701)
 texture = ExtResource("0_fuck")
 centered = false
 
 [node name="Backleaf_left_tip" type="Sprite2D" parent="Body"]
-position = Vector2(24.0067, 55.9034)
-rotation = -0.14561
-scale = Vector2(0.658697, 0.602126)
-skew = 0.0522428
+position = Vector2(25.0105, 54.1418)
+rotation = 0.00614808
+scale = Vector2(0.563836, 0.535014)
+skew = 0.00349057
 texture = ExtResource("1_fuck")
 centered = false
 
 [node name="Backleaf_right_tip" type="Sprite2D" parent="Body"]
-position = Vector2(48.4966, 53.9067)
-rotation = 0.161553
-scale = Vector2(0.640168, 0.562328)
-skew = -0.0520669
+position = Vector2(47.3105, 53.3523)
+rotation = 0.00210985
+scale = Vector2(0.575986, 0.535014)
+skew = 0.00349096
 texture = ExtResource("2_fuck")
 centered = false
 
 [node name="Stalk_bottom" type="Sprite2D" parent="Body"]
-position = Vector2(42.3731, 50.3966)
-rotation = 0.652034
-scale = Vector2(0.566933, 0.629168)
-skew = -0.233053
+position = Vector2(36.4209, 52.0477)
+rotation = 0.0387375
+scale = Vector2(0.556104, 0.575881)
+skew = -0.0133121
 texture = ExtResource("3_fuck")
 centered = false
 
 [node name="Stalk_top" type="Sprite2D" parent="Body"]
-position = Vector2(43.9361, 38.9731)
-rotation = 0.409331
-scale = Vector2(0.532471, 0.785303)
-skew = 0.125179
+position = Vector2(31.5523, 42.8701)
+rotation = 0.0350642
+scale = Vector2(0.556104, 0.641047)
+skew = -0.0152396
 texture = ExtResource("4_fuck")
 centered = false
 
 [node name="Frontleaf" type="Sprite2D" parent="Body"]
-position = Vector2(21.7034, 56.4765)
-scale = Vector2(0.599832, 0.48784)
+position = Vector2(22.6895, 53.9582)
+scale = Vector2(0.558418, 0.570359)
 texture = ExtResource("5_fuck")
 centered = false
 
 [node name="Frontleaf_right_tip" type="Sprite2D" parent="Body"]
-position = Vector2(57.8866, 57.0832)
-rotation = -0.000821479
-scale = Vector2(0.600706, 0.535672)
+position = Vector2(56.0791, 55.5686)
+rotation = -0.0271711
+scale = Vector2(0.587031, 0.572672)
 texture = ExtResource("6_fuck")
 centered = false
 
 [node name="Frontleaf_left_tip" type="Sprite2D" parent="Body"]
-position = Vector2(18.2034, 62.4798)
-rotation = -0.0980171
-scale = Vector2(0.580437, 0.58237)
-skew = -0.00349039
+position = Vector2(19.2105, 60.9477)
+rotation = 0.0254251
+scale = Vector2(0.574881, 0.572672)
 texture = ExtResource("7_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal8" type="Sprite2D" parent="Body"]
-position = Vector2(33.8731, 47.1966)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.914009)
-skew = -0.0207093
+position = Vector2(23.515, 46.2432)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.848223)
+skew = 0.00789308
 texture = ExtResource("8_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal7" type="Sprite2D" parent="Body"]
-position = Vector2(25.6731, 44.037)
-rotation = 0.016426
-scale = Vector2(1.00024, 0.955026)
-skew = -0.016426
+position = Vector2(15.3045, 42.191)
+rotation = -0.0531391
+scale = Vector2(1.00579, 1.06081)
+skew = 0.0531391
 texture = ExtResource("9_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal6" type="Sprite2D" parent="Body"]
-position = Vector2(20.3, 39.7471)
-rotation = 0.0167193
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0167193
+position = Vector2(9.91496, 37.8387)
+rotation = -0.000907656
+scale = Vector2(0.810418, 0.848223)
+skew = 0.000907656
 texture = ExtResource("10_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal5" type="Sprite2D" parent="Body"]
-position = Vector2(17.0765, 33.4975)
-rotation = 0.0167193
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0167193
+position = Vector2(6.71496, 31.8387)
+rotation = -0.0174243
+scale = Vector2(0.806104, 0.805627)
+skew = 0.0174243
 texture = ExtResource("11_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal4" type="Sprite2D" parent="Body"]
-position = Vector2(19.4765, 25.2874)
-rotation = 0.0167193
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0167193
+position = Vector2(9.22542, 23.7701)
+rotation = -0.0351389
+scale = Vector2(0.804896, 0.794477)
+skew = 0.0351389
 texture = ExtResource("12_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal3" type="Sprite2D" parent="Body"]
-position = Vector2(23.7731, 18.874)
-rotation = 0.0167193
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0167193
+position = Vector2(13.6045, 18.7283)
+rotation = -0.0314655
+scale = Vector2(0.805, 0.794477)
+skew = 0.0314655
 texture = ExtResource("13_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal2" type="Sprite2D" parent="Body"]
-position = Vector2(30.8765, 14.4706)
-rotation = 0.0167193
-scale = Vector2(1.0002, 1.03063)
-skew = -0.0167193
+position = Vector2(20.7045, 13.191)
+rotation = -0.00789308
+scale = Vector2(1, 1.01105)
+skew = 0.00789308
 texture = ExtResource("14_fuck")
 centered = false
 
 [node name="SunFlower_leftpetal1" type="Sprite2D" parent="Body"]
-position = Vector2(37.1765, 13.4235)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.823731)
-skew = -0.0207093
+position = Vector2(26.9045, 11.8387)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.823299)
+skew = 0.00789308
 texture = ExtResource("15_fuck")
 centered = false
 
 [node name="SunFlower_bottompetals" type="Sprite2D" parent="Body"]
-position = Vector2(41.5832, 47.9933)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.873378)
-skew = -0.0207093
+position = Vector2(31.3254, 46.4641)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.923147)
+skew = 0.00789308
 texture = ExtResource("16_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal9" type="Sprite2D" parent="Body"]
-position = Vector2(54.5798, 48.0899)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.818916)
-skew = -0.0207093
+position = Vector2(44.6045, 45.9328)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.848223)
+skew = 0.00789308
 texture = ExtResource("17_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal8" type="Sprite2D" parent="Body"]
-position = Vector2(59.4731, 45.0765)
-rotation = 0.0243472
-scale = Vector2(0.800202, 0.932807)
-skew = -0.0243472
+position = Vector2(49.115, 43.3223)
+rotation = 0.03962
+scale = Vector2(0.801895, 0.848223)
+skew = -0.03962
 texture = ExtResource("18_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal7" type="Sprite2D" parent="Body"]
-position = Vector2(62.5832, 41.8067)
-rotation = 0.0240538
-scale = Vector2(0.800168, 0.961151)
-skew = -0.0240538
+position = Vector2(52.815, 40.1223)
+rotation = 0.03962
+scale = Vector2(0.801895, 0.848223)
+skew = -0.03962
 texture = ExtResource("19_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal6" type="Sprite2D" parent="Body"]
-position = Vector2(67.6697, 37.8202)
-rotation = -0.0889519
-scale = Vector2(0.804034, 1.05608)
-skew = 0.0889519
+position = Vector2(57.6359, 35.391)
+rotation = 0.0364948
+scale = Vector2(0.801895, 0.805627)
+skew = -0.0364948
 texture = ExtResource("20_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal5" type="Sprite2D" parent="Body"]
-position = Vector2(69.7731, 32.8269)
-rotation = 0.0240538
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0240538
+position = Vector2(59.415, 29.4119)
+rotation = -0.00729636
+scale = Vector2(0.805209, 0.805627)
+skew = 0.00729636
 texture = ExtResource("21_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal4" type="Sprite2D" parent="Body"]
-position = Vector2(67.9731, 23.9269)
-rotation = 0.0240538
-scale = Vector2(1.00024, 1.03063)
-skew = -0.0240538
+position = Vector2(56.6359, 21.1805)
+rotation = -0.00802597
+scale = Vector2(1.00631, 1.04097)
+skew = 0.00802597
 texture = ExtResource("22_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal3" type="Sprite2D" parent="Body"]
-position = Vector2(63.4798, 20.6067)
-rotation = 0.0240538
-scale = Vector2(1.00024, 1.03063)
-skew = -0.0240538
+position = Vector2(53.115, 17.9387)
+rotation = -0.00206036
+scale = Vector2(1.00521, 1.08384)
+skew = 0.00206036
 texture = ExtResource("23_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal2" type="Sprite2D" parent="Body"]
-position = Vector2(59.2731, 16.7235)
-rotation = 0.0240538
-scale = Vector2(0.800168, 0.823731)
-skew = -0.0240538
+position = Vector2(48.9045, 14.5283)
+rotation = 0.0364948
+scale = Vector2(0.801895, 0.826508)
+skew = -0.0364948
 texture = ExtResource("24_fuck")
 centered = false
 
 [node name="SunFlower_rightpetal1" type="Sprite2D" parent="Body"]
-position = Vector2(53.9765, 14.3269)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.823731)
-skew = -0.0207093
+position = Vector2(43.615, 12.0969)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.876211)
+skew = 0.00789308
 texture = ExtResource("25_fuck")
 centered = false
 
 [node name="SunFlower_toppetals" type="Sprite2D" parent="Body"]
-position = Vector2(43.3731, 13.5235)
-rotation = 0.0207093
-scale = Vector2(0.8, 0.823731)
-skew = -0.0207093
+position = Vector2(33.1045, 11.276)
+rotation = -0.00789308
+scale = Vector2(0.8, 0.912556)
+skew = 0.00789308
 texture = ExtResource("26_fuck")
 centered = false
 
 [node name="Anim_idle" type="Sprite2D" parent="Body"]
-position = Vector2(25.8731, 20.1597)
-scale = Vector2(0.8, 0.712975)
+position = Vector2(15.515, 17.6492)
+scale = Vector2(0.8, 0.744135)
 texture = ExtResource("27_fuck")
 centered = false
 
 [node name="Anim_blink" type="Sprite2D" parent="Body"]
 visible = false
-position = Vector2(38.9496, 25.9664)
+position = Vector2(28.1045, 24.1592)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("28_fuck")
 centered = false

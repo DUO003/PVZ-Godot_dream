@@ -21,7 +21,7 @@ func _ready() -> void:
 	super._ready()
 	
 	label_hp.text = str(curr_Hp)
-	
+	#print("测试",curr_Hp)
 	if Global.display_plant_HP_label:
 		label_hp.visible = true
 	else:

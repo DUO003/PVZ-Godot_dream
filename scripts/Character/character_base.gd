@@ -3,7 +3,7 @@ class_name CharacterBase
 # 植物和僵尸的基础类
 
 @export var max_hp :int = 300
-@export var curr_Hp : int
+@export var curr_Hp : int = 300
 
 var hit_tween: Tween = null  # 发光动画
 var decelerate_timer: Timer  # 减速计时器
