@@ -10,6 +10,7 @@ black_dirs = []
 script_tool_tip_list = {}
 script_list_meta = {
 "res://FZB/ZW/zj_001_dmsfss.gd": [-1, -1],
+"res://FZB/ZW/zj_002_ygtdl.gd": [-1, -1],
 "res://addons/R2Ga_PVZ/R2Ga_PVZ.gd": [-1, -1],
 "res://addons/R2Ga_PVZ/ui/main_panel.gd": [-1, -1],
 "res://addons/SignalVisualizer/Common/signal_connection.gd": [-1, -1],

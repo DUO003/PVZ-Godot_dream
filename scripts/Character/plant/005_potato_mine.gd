@@ -31,7 +31,7 @@ func _rise_end():
 	
 	## 开始眨眼
 	is_blink = true
-	blink_timer.start()
+	#blink_timer.start()
 
 func _process(delta):
 	if is_armed:

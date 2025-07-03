@@ -104,6 +104,10 @@ var CardInfo = {
 		CardInfoAttribute.CoolTime: 2.0,
 		CardInfoAttribute.SunCost: 125
 		},
+	PlantType.ygtdl: {
+		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.SunCost: 0
+		},
 }
 
 
@@ -129,6 +133,7 @@ enum PlantType {
 	DoomShroom,
 	#杂交版本
 	dmsfss,
+	ygtdl,
 	}
 
 var PlantTypeSceneMap = {
@@ -149,6 +154,7 @@ var PlantTypeSceneMap = {
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom.tscn"),
 	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_dmsfss.tscn"),
+	PlantType.ygtdl: preload("res://FZB/ZW/ZJ_002_ygtdl.tscn"),
 }
 
 var StaticPlantTypeSceneMap = {
@@ -169,6 +175,7 @@ var StaticPlantTypeSceneMap = {
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom_static.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom_static.tscn"),
 	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_kp_dmsfss.tscn"),
+	PlantType.ygtdl: preload("res://FZB/ZW/ZJ_002_kp_ygtdl.tscn"),
 }
 
 #endregion
@@ -301,6 +308,7 @@ var curr_plant = [
 	PlantType.IceShroom,
 	PlantType.DoomShroom,
 	PlantType.dmsfss,
+	PlantType.ygtdl,
 ]
 
 

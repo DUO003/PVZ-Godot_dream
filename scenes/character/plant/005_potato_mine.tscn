@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bpqnfubk3sqri"]
+[gd_scene load_steps=41 format=3 uid="uid://drfhg1vff01sh"]
 
 [ext_resource type="Animation" uid="uid://cenx6nfh0tar8" path="res://animation/character/plant/005_potato_mine/PotatoMine_armed.tres" id="1_anim"]
 [ext_resource type="Texture2D" uid="uid://bo22elcj4cnrl" path="res://assets/reanim/PotatoMine_rock4.png" id="1_fuck"]
@@ -219,7 +219,8 @@ centered = false
 
 [node name="PotatoMine_blink" type="Sprite2D" parent="Body"]
 visible = false
-position = Vector2(31.0327, 51.6634)
+position = Vector2(1.51163, 1.04167)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("3_th2kl")
 centered = false
 
@@ -265,16 +266,15 @@ texture = ExtResource("12_fuck")
 centered = false
 
 [node name="Anim_glow" type="Sprite2D" parent="Body"]
-visible = false
 position = Vector2(21.1, 5.3)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_p5uer")
 centered = false
 
 [node name="PotatoMine_rock6" type="Sprite2D" parent="Body"]
-position = Vector2(7.6, 72.3)
-rotation = -3.50811
-scale = Vector2(0.792, 0.792)
+position = Vector2(7.6, 72.4)
+rotation = -3.50986
+scale = Vector2(0.793, 0.793)
 texture = ExtResource("10_fuck")
 centered = false
 
@@ -286,8 +286,8 @@ texture = ExtResource("9_fuck")
 centered = false
 
 [node name="PotatoMine_rock3" type="Sprite2D" parent="Body"]
-position = Vector2(85.4, 74.3)
-rotation = 2.87979
+position = Vector2(85.3, 74.3)
+rotation = 2.87805
 scale = Vector2(0.794, 0.794)
 texture = ExtResource("8_fuck")
 centered = false
