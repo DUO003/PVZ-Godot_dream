@@ -1,0 +1,341 @@
+[gd_scene load_steps=46 format=3 uid="uid://5ems0xw4k1lp"]
+
+[ext_resource type="Script" uid="uid://b7vg4ofxajdtb" path="res://scripts/character/plant/003_cherry_bomb.gd" id="1_72y3o"]
+[ext_resource type="AudioStream" uid="uid://dwjo8pcmj0gjr" path="res://assets/audio/SFX/plant/cherrybomb.ogg" id="2_7q0j7"]
+[ext_resource type="Texture2D" uid="uid://d0hpo2yp78fwc" path="res://assets/image/plant/plantshadow.png" id="3_1qmlo"]
+[ext_resource type="Texture2D" uid="uid://dvuugtbourjhs" path="res://assets/reanim/CherryBomb_leftstem.png" id="4_nemkq"]
+[ext_resource type="Texture2D" uid="uid://bmpuc6vb6mfpk" path="res://assets/reanim/CherryBomb_left1.png" id="5_baj3n"]
+[ext_resource type="Texture2D" uid="uid://c3mfcmrjen4il" path="res://assets/reanim/CherryBomb_left3.png" id="6_nhmrf"]
+[ext_resource type="Texture2D" uid="uid://dlayj8ftlothc" path="res://assets/reanim/CherryBomb_lefteye11.png" id="7_4wt6g"]
+[ext_resource type="Texture2D" uid="uid://cuv0j6lkkkr5d" path="res://assets/reanim/CherryBomb_lefteye21.png" id="8_v41nc"]
+[ext_resource type="Texture2D" uid="uid://b6gaqdfa477uw" path="res://assets/reanim/CherryBomb_leftmouth1.png" id="9_of2aq"]
+[ext_resource type="Texture2D" uid="uid://bjdqpef0ve0pg" path="res://assets/reanim/CherryBomb_rightstem.png" id="10_1oumg"]
+[ext_resource type="Texture2D" uid="uid://dspmy0uy0cacv" path="res://assets/reanim/CherryBomb_right1.png" id="11_v0kj4"]
+[ext_resource type="Texture2D" uid="uid://uklt4t2i3j63" path="res://assets/reanim/CherryBomb_right3.png" id="12_tktvl"]
+[ext_resource type="Texture2D" uid="uid://cfdwh0bhgcrlb" path="res://assets/reanim/CherryBomb_righteye11.png" id="13_y82v4"]
+[ext_resource type="Texture2D" uid="uid://d0dmytj04iew5" path="res://assets/reanim/CherryBomb_righteye21.png" id="14_rpxxs"]
+[ext_resource type="Texture2D" uid="uid://biffa3h6h5rxy" path="res://assets/reanim/CherryBomb_rightmouth1.png" id="15_lin2u"]
+[ext_resource type="Texture2D" uid="uid://d2cv50584w3k7" path="res://assets/reanim/CherryBomb_leaf3.png" id="16_flknf"]
+[ext_resource type="Texture2D" uid="uid://b6robscgti75e" path="res://assets/reanim/CherryBomb_leaf2tip.png" id="17_cwp3h"]
+[ext_resource type="Texture2D" uid="uid://bjskgh2aep1fi" path="res://assets/reanim/CherryBomb_leaf2.png" id="18_i3k46"]
+[ext_resource type="Texture2D" uid="uid://be4ah7odddsjx" path="res://assets/reanim/CherryBomb_leaf1.png" id="19_y5u80"]
+[ext_resource type="Texture2D" uid="uid://fh1tkc18o3qe" path="res://assets/reanim/CherryBomb_leaf1tip.png" id="20_dupqx"]
+[ext_resource type="Animation" uid="uid://eg5i0srekcuo" path="res://animation/character/plant/003_cherry_bomb/CherryBomb_explode.tres" id="21_qktuy"]
+[ext_resource type="Animation" uid="uid://b2a3f5y4dudyi" path="res://animation/character/plant/003_cherry_bomb/CherryBomb_idle.tres" id="22_rpbhy"]
+[ext_resource type="Script" uid="uid://uv71i8wk2job" path="res://scripts/fx/bomb_effect/001_bomb_effect_cherry_bomb.gd" id="23_t5i7t"]
+[ext_resource type="Texture2D" uid="uid://lr726nfj8o4l" path="res://assets/image/particles/bullet/DoomShroom_Explosion_Top.png" id="24_tg1r3"]
+[ext_resource type="Texture2D" uid="uid://ysajcyiwrdnk" path="res://assets/image/particles/ExplosionPowie.png" id="25_hp3cg"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q5e28"]
+_data = {
+&"CherryBomb_explode": ExtResource("21_qktuy"),
+&"CherryBomb_idle": ExtResource("22_rpbhy")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q5e28"]
+animation = &"CherryBomb_explode"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fj2s8"]
+animation = &"CherryBomb_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qg3or"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ocibd"]
+advance_mode = 2
+advance_expression = "is_bomb"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_fj2s8"]
+states/CherryBomb_explode/node = SubResource("AnimationNodeAnimation_q5e28")
+states/CherryBomb_explode/position = Vector2(400, 148)
+states/CherryBomb_idle/node = SubResource("AnimationNodeAnimation_fj2s8")
+states/CherryBomb_idle/position = Vector2(394, 58)
+states/Start/position = Vector2(177, 87)
+transitions = ["Start", "CherryBomb_idle", SubResource("AnimationNodeStateMachineTransition_qg3or"), "CherryBomb_idle", "CherryBomb_explode", SubResource("AnimationNodeStateMachineTransition_ocibd")]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fj2s8"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qg3or"]
+nodes/AnimationNodeStateMachine/node = SubResource("AnimationNodeStateMachine_fj2s8")
+nodes/AnimationNodeStateMachine/position = Vector2(100, 80)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_fj2s8")
+nodes/TimeScale/position = Vector2(460, 80)
+nodes/output/position = Vector2(740, 140)
+node_connections = [&"TimeScale", 0, &"AnimationNodeStateMachine", &"output", 0, &"TimeScale"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrlnw"]
+size = Vector2(50, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg3or"]
+size = Vector2(250, 200)
+
+[sub_resource type="Curve" id="Curve_sobky"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.456044, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -6.4015, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xru78"]
+curve = SubResource("Curve_sobky")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sobky"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 80.0
+emission_ring_inner_radius = 60.0
+emission_ring_cone_angle = 90.0
+angular_velocity_min = 189.47
+angular_velocity_max = 189.47
+radial_velocity_min = 30.0
+radial_velocity_max = 70.0
+gravity = Vector3(0, 0, 0)
+attractor_interaction_enabled = false
+scale_min = 0.1
+scale_max = 0.3
+alpha_curve = SubResource("CurveTexture_xru78")
+
+[sub_resource type="Curve" id="Curve_gijk3"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.582418, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_p5gqp"]
+curve = SubResource("Curve_gijk3")
+
+[sub_resource type="Curve" id="Curve_cjc23"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.510989, -1), 0.0, 0.0, 0, 0, Vector2(1, -0.985075), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_svbgh"]
+curve = SubResource("Curve_cjc23")
+
+[sub_resource type="Curve" id="Curve_hfb7l"]
+_data = [Vector2(0, 0.696629), 0.0, 0.0, 0, 0, Vector2(0.494505, 1), 0.0, 0.0, 0, 0, Vector2(0.972528, 0.247191), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_3oaqw"]
+curve = SubResource("Curve_hfb7l")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q257l"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 50.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 91.64
+angular_velocity_curve = SubResource("CurveTexture_svbgh")
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+attractor_interaction_enabled = false
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_3oaqw")
+color = Color(0.917647, 0.756863, 0, 1)
+alpha_curve = SubResource("CurveTexture_p5gqp")
+
+[node name="CherryBomb" type="Node2D" node_paths=PackedStringArray("SFX_bomb")]
+script = ExtResource("1_72y3o")
+SFX_bomb = NodePath("Cherrybomb")
+no_blink = true
+
+[node name="Cherrybomb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7q0j7")
+bus = &"SFX"
+
+[node name="Body" type="Node2D" parent="."]
+position = Vector2(-42, -45)
+
+[node name="shadow" type="Sprite2D" parent="Body"]
+position = Vector2(41, 70)
+texture = ExtResource("3_1qmlo")
+
+[node name="Anim_explode" type="Sprite2D" parent="Body"]
+centered = false
+
+[node name="Anim_idle" type="Sprite2D" parent="Body"]
+visible = false
+centered = false
+
+[node name="CherryBomb_leftstem" type="Sprite2D" parent="Body"]
+position = Vector2(29.7, 5.9)
+rotation = 0.774926
+scale = Vector2(0.599, 0.599)
+texture = ExtResource("4_nemkq")
+centered = false
+
+[node name="CherryBomb_left1" type="Sprite2D" parent="Body"]
+visible = false
+position = Vector2(-8.3, 17.2)
+rotation = 0.057596
+scale = Vector2(1.152, 1.246)
+texture = ExtResource("5_baj3n")
+centered = false
+
+[node name="CherryBomb_left3" type="Sprite2D" parent="Body"]
+position = Vector2(-12.4, 5.3)
+rotation = 0.171042
+scale = Vector2(1.037, 1.003)
+texture = ExtResource("6_nhmrf")
+centered = false
+
+[node name="CherryBomb_lefteye11" type="Sprite2D" parent="Body"]
+position = Vector2(-9.7, 22.1)
+rotation = 0.174533
+scale = Vector2(1.184, 1.214)
+texture = ExtResource("7_4wt6g")
+centered = false
+
+[node name="CherryBomb_lefteye21" type="Sprite2D" parent="Body"]
+position = Vector2(15.4, 31.8)
+rotation = 0.174533
+scale = Vector2(1.184, 1.214)
+texture = ExtResource("8_v41nc")
+centered = false
+
+[node name="CherryBomb_leftmouth1" type="Sprite2D" parent="Body"]
+position = Vector2(-15.9, 43.3)
+rotation = 0.174533
+scale = Vector2(1.698, 1.214)
+texture = ExtResource("9_of2aq")
+centered = false
+
+[node name="CherryBomb_rightstem" type="Sprite2D" parent="Body"]
+position = Vector2(34.5, 7.6)
+rotation = 6.62178
+scale = Vector2(0.57, 0.554)
+skew = 0.0122174
+texture = ExtResource("10_1oumg")
+centered = false
+
+[node name="CherryBomb_right1" type="Sprite2D" parent="Body"]
+visible = false
+position = Vector2(31.8, 22.7)
+rotation = -0.143117
+scale = Vector2(1.308, 1.327)
+skew = 0.0261799
+texture = ExtResource("11_v0kj4")
+centered = false
+
+[node name="CherryBomb_right3" type="Sprite2D" parent="Body"]
+position = Vector2(26.2, 23.3)
+rotation = -0.270526
+scale = Vector2(1.116, 1.116)
+texture = ExtResource("12_tktvl")
+centered = false
+
+[node name="CherryBomb_righteye11" type="Sprite2D" parent="Body"]
+position = Vector2(76.2, 30.2)
+scale = Vector2(1.218, 1.218)
+texture = ExtResource("13_y82v4")
+centered = false
+
+[node name="CherryBomb_righteye21" type="Sprite2D" parent="Body"]
+position = Vector2(38.6, 38.7)
+scale = Vector2(1.493, 1.493)
+texture = ExtResource("14_rpxxs")
+centered = false
+
+[node name="CherryBomb_rightmouth1" type="Sprite2D" parent="Body"]
+position = Vector2(56.4, 52.7)
+rotation = -0.118682
+scale = Vector2(3.386, 1.077)
+skew = 0.0366515
+texture = ExtResource("15_lin2u")
+centered = false
+
+[node name="CherryBomb_leaf3" type="Sprite2D" parent="Body"]
+position = Vector2(39.5, 0.5)
+rotation = 0.328122
+scale = Vector2(0.798, 0.798)
+texture = ExtResource("16_flknf")
+centered = false
+
+[node name="CherryBomb_leaf2tip" type="Sprite2D" parent="Body"]
+position = Vector2(42.8, -6.3)
+rotation = 1.58825
+scale = Vector2(0.796, 0.859)
+skew = 0.383972
+texture = ExtResource("17_cwp3h")
+centered = false
+
+[node name="CherryBomb_leaf2" type="Sprite2D" parent="Body"]
+position = Vector2(42, -8.7)
+rotation = 0.818559
+scale = Vector2(0.798, 0.798)
+texture = ExtResource("18_i3k46")
+centered = false
+
+[node name="CherryBomb_leaf1" type="Sprite2D" parent="Body"]
+position = Vector2(33.5, -5.2)
+rotation = 0.809833
+scale = Vector2(0.798, 0.805)
+skew = 0.1309
+texture = ExtResource("19_y5u80")
+centered = false
+
+[node name="CherryBomb_leaf1tip" type="Sprite2D" parent="Body"]
+position = Vector2(29.2, -10.1)
+rotation = 0.963422
+scale = Vector2(0.796, 0.802)
+skew = -0.125664
+texture = ExtResource("20_dupqx")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q5e28")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_qg3or")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/TimeScale/scale = 1.0
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yrlnw")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 20
+input_pickable = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_qg3or")
+
+[node name="BombEffect" type="Node2D" parent="."]
+visible = false
+script = ExtResource("23_t5i7t")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="BombEffect"]
+self_modulate = Color(1, 0.109804, 0, 1)
+emitting = false
+amount = 20
+texture = ExtResource("24_tg1r3")
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+collision_base_size = 0.0
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_sobky")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BombEffect"]
+emitting = false
+amount = 10
+texture = ExtResource("24_tg1r3")
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+collision_base_size = 0.0
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_q257l")
+
+[node name="Powie" type="Sprite2D" parent="BombEffect"]
+texture = ExtResource("25_hp3cg")
