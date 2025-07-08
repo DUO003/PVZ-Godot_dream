@@ -9,11 +9,10 @@ class_name BulletPea
 @export var direction: Vector2 = Vector2.RIGHT	# 子弹默认移动方向
 
 @export var bullet_mode : Global.BulletMode
-## 是否有铁器防具音效
-@export var bullet_shield_SFX := true
-
 
 @export var bullet_effect: BulletEffect
+# 最大随机偏移量 (像素)
+@export var max_random_offset: Vector2 = Vector2(randf_range(-5, 5),randf_range(-5, 5))
 
 ## 子弹移动离出生点最大距离
 @export var max_distance := 2000.0
@@ -26,6 +25,7 @@ var screen_rect: Rect2
 func _ready() -> void:
 	# 必须在 ready 后才能安全获取视口尺寸
 	screen_rect = get_viewport_rect().grow(500)
+	
 	# 安全获取BulletEffect节点并验证类型
 	if has_node("BulletEffect"):
 		var effect_node = $BulletEffect
@@ -35,27 +35,30 @@ func _ready() -> void:
 		# 可以选择禁用子弹效果或使用默认值
 		bullet_effect = null
 	
+	# 记录初始位置
+	start_pos = global_position
+	
+	
+func apply_random_offset():
+	# 计算随机偏移
+	var offset = max_random_offset
+	# 应用偏移到当前位置
+	position += offset
+	# 更新初始位置记录，确保与偏移后的位置一致
+	start_pos = global_position
+	
 func _process(delta: float) -> void:
 	# 每帧移动子弹
-	position.x += direction.x * speed * delta
-	
-	## 新增：移动超过250像素后销毁，部分子弹有限制
+	position += direction * speed * delta
+	# 检查是否超过最大距离
 	if global_position.distance_to(start_pos) > max_distance:
 		queue_free()
-	
-	## 超过屏幕500像素移出
+
+	# 检查是否超出屏幕范围
 	if not screen_rect.has_point(global_position):
 		queue_free()
 		
 
-func change_y(target_y:float):
-	var tween = get_tree().create_tween()
-	var start_y = global_position.y
-	tween.tween_method(func(y): 
-		global_position.y = y
-		, start_y, target_y, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-
-	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if not is_attack:
 		is_attack = true
@@ -69,8 +72,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _attack_zombie(zombie:ZombieBase):
 	#被攻击
-	zombie.be_attacked_bullet(attack_value, bullet_mode, bullet_shield_SFX)
-
+	zombie.be_attacked_bullet(attack_value, bullet_mode)
 
 
 # 更换节点父节点

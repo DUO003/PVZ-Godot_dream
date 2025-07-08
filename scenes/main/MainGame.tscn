@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://b2soejmoqi7wd"]
+[gd_scene load_steps=52 format=3 uid="uid://b2soejmoqi7wd"]
 
 [ext_resource type="Script" uid="uid://c7dr2016dfdoo" path="res://scripts/manager/main_game_manager.gd" id="1_7dde3"]
 [ext_resource type="AudioStream" uid="uid://duvijencyf7mi" path="res://assets/audio/BGM/choose_card.mp3" id="2_8fvtd"]
@@ -45,6 +45,8 @@
 [ext_resource type="Script" uid="uid://bwp666ia1e8t7" path="res://scripts/fx/panel_color.gd" id="33_ybhi1"]
 [ext_resource type="PackedScene" uid="uid://cp0kgnsx20pyh" path="res://scenes/ui/dialog.tscn" id="34_8fvtd"]
 [ext_resource type="PackedScene" uid="uid://5v0fdtao52jl" path="res://scenes/main/control_canvas_layer.tscn" id="34_ifnc6"]
+[ext_resource type="Script" uid="uid://d2g7qgdt0ej3k" path="res://FZB/货币栏.gd" id="46_b4qea"]
+[ext_resource type="Texture2D" uid="uid://cje7xdhcyt1cu" path="res://assets/ZJ/images/coin金币栏.png" id="46_vyo3a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x628s"]
 texture = ExtResource("8_xvvqk")
@@ -1705,6 +1707,27 @@ offset_top = 132.0
 offset_right = 169.0
 offset_bottom = 155.0
 text = "没做"
+
+[node name="资源管理" type="Node2D" parent="."]
+position = Vector2(1, 572)
+script = ExtResource("46_b4qea")
+
+[node name="货币栏" type="Sprite2D" parent="资源管理"]
+position = Vector2(66, 6)
+texture = ExtResource("46_vyo3a")
+region_enabled = true
+region_rect = Rect2(136, 0, 132, 43)
+
+[node name="金币文本" type="Label" parent="资源管理/货币栏"]
+offset_left = -25.0
+offset_top = -8.0
+offset_right = 60.0
+offset_bottom = 20.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "999990"
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_exited"]

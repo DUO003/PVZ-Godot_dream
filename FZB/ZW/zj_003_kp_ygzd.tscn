@@ -1,0 +1,295 @@
+[gd_scene load_steps=18 format=3 uid="uid://bq634jugmkwml"]
+
+[ext_resource type="Texture2D" uid="uid://dvuugtbourjhs" path="res://assets/reanim/CherryBomb_leftstem.png" id="3_mvpyb"]
+[ext_resource type="Texture2D" uid="uid://bjdqpef0ve0pg" path="res://assets/reanim/CherryBomb_rightstem.png" id="4_kn80o"]
+[ext_resource type="Texture2D" uid="uid://d2cv50584w3k7" path="res://assets/reanim/CherryBomb_leaf3.png" id="5_m7sxl"]
+[ext_resource type="Texture2D" uid="uid://b6robscgti75e" path="res://assets/reanim/CherryBomb_leaf2tip.png" id="6_i3r2a"]
+[ext_resource type="Texture2D" uid="uid://bjskgh2aep1fi" path="res://assets/reanim/CherryBomb_leaf2.png" id="7_6mn78"]
+[ext_resource type="Texture2D" uid="uid://be4ah7odddsjx" path="res://assets/reanim/CherryBomb_leaf1.png" id="8_oni8r"]
+[ext_resource type="Texture2D" uid="uid://fh1tkc18o3qe" path="res://assets/reanim/CherryBomb_leaf1tip.png" id="9_0cwtx"]
+[ext_resource type="Texture2D" uid="uid://d0hpo2yp78fwc" path="res://assets/image/plant/plantshadow.png" id="10_nhekl"]
+[ext_resource type="Texture2D" uid="uid://kepd2pc6jyeu" path="res://assets/ZJ/reanim/SunFlower_head.png" id="11_r65bn"]
+[ext_resource type="Texture2D" uid="uid://bskk2lwgfubh8" path="res://assets/ZJ/reanim/SunFlower_leftpetal1.png" id="12_n43ns"]
+[ext_resource type="Texture2D" uid="uid://ci7fyco2cl21k" path="res://assets/ZJ/reanim/SunFlower_leftpetal2.png" id="13_asi7r"]
+[ext_resource type="Texture2D" uid="uid://btsp4eju7ct82" path="res://assets/ZJ/reanim/SunFlower_leftpetal3.png" id="14_txims"]
+[ext_resource type="Texture2D" uid="uid://dfegsngbdg5ri" path="res://assets/ZJ/reanim/SunFlower_leftpetal4.png" id="15_nkf28"]
+[ext_resource type="Texture2D" uid="uid://bs1evme0ijx2" path="res://assets/ZJ/reanim/SunFlower_leftpetal5.png" id="16_1ksr0"]
+[ext_resource type="Texture2D" uid="uid://dc8vmjxsn0tcs" path="res://assets/ZJ/reanim/SunFlower_leftpetal6.png" id="17_0y7xn"]
+[ext_resource type="Texture2D" uid="uid://dld8cbh727a1y" path="res://assets/ZJ/reanim/SunFlower_leftpetal7.png" id="18_66ktc"]
+[ext_resource type="Texture2D" uid="uid://qeygavcr5i8q" path="res://assets/ZJ/reanim/SunFlower_leftpetal8.png" id="19_qd7d4"]
+
+[node name="CherryBomb" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Body" type="Node2D" parent="."]
+position = Vector2(-42, -45)
+
+[node name="藤蔓" type="Node2D" parent="Body"]
+
+[node name="CherryBomb_leftstem" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(31, 17.1)
+rotation = 0.493928
+scale = Vector2(0.599, 0.599)
+texture = ExtResource("3_mvpyb")
+centered = false
+
+[node name="CherryBomb_rightstem" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(34, 21.9)
+rotation = 6.23432
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_kn80o")
+centered = false
+
+[node name="CherryBomb_leaf3" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(36.1, 11.7)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_m7sxl")
+centered = false
+
+[node name="CherryBomb_leaf2tip" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(25.5, 7.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_i3r2a")
+centered = false
+
+[node name="CherryBomb_leaf2" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(27.2, 5.5)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_6mn78")
+centered = false
+
+[node name="CherryBomb_leaf1" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(23.3, 14.1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_oni8r")
+centered = false
+
+[node name="CherryBomb_leaf1tip" type="Sprite2D" parent="Body/藤蔓"]
+position = Vector2(18, 14.9)
+scale = Vector2(0.8, 0.871)
+texture = ExtResource("9_0cwtx")
+centered = false
+
+[node name="阴影" type="Sprite2D" parent="Body"]
+position = Vector2(41, 70)
+texture = ExtResource("10_nhekl")
+
+[node name="Node2D" type="Node2D" parent="Body"]
+position = Vector2(42, 45)
+
+[node name="向日葵表情" type="Sprite2D" parent="Body/Node2D"]
+position = Vector2(-18, 4)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("11_r65bn")
+
+[node name="向日葵花瓣1" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-18, -19)
+texture = ExtResource("12_n43ns")
+
+[node name="向日葵花瓣2" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-12, -23)
+texture = ExtResource("13_asi7r")
+
+[node name="向日葵花瓣3" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-31, -8)
+texture = ExtResource("14_txims")
+
+[node name="向日葵花瓣4" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-25, -15)
+texture = ExtResource("15_nkf28")
+
+[node name="向日葵花瓣5" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-34, 2)
+texture = ExtResource("16_1ksr0")
+
+[node name="向日葵花瓣6" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-24, 18)
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣7" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-17, 23)
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣8" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-8, 25)
+rotation = 0.00152363
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣9" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-30, 12)
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣10" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(3.8147e-06, 26)
+rotation = -0.576763
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣11" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(-5, -26)
+rotation = 2.84386
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣12" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(16, 21)
+rotation = 3.12508
+texture = ExtResource("12_n43ns")
+
+[node name="向日葵花瓣13" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(22, 18)
+rotation = 3.12508
+texture = ExtResource("13_asi7r")
+
+[node name="向日葵花瓣14" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(29, 14)
+rotation = 3.12508
+texture = ExtResource("14_txims")
+
+[node name="向日葵花瓣15" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(9, 26)
+rotation = 3.62444
+texture = ExtResource("15_nkf28")
+
+[node name="向日葵花瓣16" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(34, -3)
+rotation = 3.12508
+texture = ExtResource("16_1ksr0")
+
+[node name="向日葵花瓣17" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(29, -11)
+rotation = 3.12508
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣18" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(19, -21)
+rotation = 3.12508
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣19" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(10, -25)
+rotation = 3.1266
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣20" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(24, -17)
+rotation = 3.12508
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣21" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(32, 5)
+rotation = -1.46845
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣22" type="Sprite2D" parent="Body/Node2D/向日葵表情"]
+position = Vector2(3, -27)
+rotation = 2.54832
+texture = ExtResource("18_66ktc")
+
+[node name="Node2D2" type="Node2D" parent="Body"]
+position = Vector2(42, 45)
+
+[node name="向日葵表情2" type="Sprite2D" parent="Body/Node2D2"]
+position = Vector2(19, 5)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("11_r65bn")
+
+[node name="向日葵花瓣1" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-18, -19)
+texture = ExtResource("12_n43ns")
+
+[node name="向日葵花瓣2" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-12, -23)
+texture = ExtResource("13_asi7r")
+
+[node name="向日葵花瓣3" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-31, -8)
+texture = ExtResource("14_txims")
+
+[node name="向日葵花瓣4" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-25, -15)
+texture = ExtResource("15_nkf28")
+
+[node name="向日葵花瓣5" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-34, 2)
+texture = ExtResource("16_1ksr0")
+
+[node name="向日葵花瓣6" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-24, 18)
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣7" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-17, 23)
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣8" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-8, 25)
+rotation = 0.00152363
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣9" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-30, 12)
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣10" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(3.8147e-06, 26)
+rotation = -0.576763
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣11" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(-5, -26)
+rotation = 2.84386
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣12" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(16, 21)
+rotation = 3.12508
+texture = ExtResource("12_n43ns")
+
+[node name="向日葵花瓣13" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(22, 18)
+rotation = 3.12508
+texture = ExtResource("13_asi7r")
+
+[node name="向日葵花瓣14" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(29, 14)
+rotation = 3.12508
+texture = ExtResource("14_txims")
+
+[node name="向日葵花瓣15" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(9, 26)
+rotation = 3.62444
+texture = ExtResource("15_nkf28")
+
+[node name="向日葵花瓣16" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(34, -3)
+rotation = 3.12508
+texture = ExtResource("16_1ksr0")
+
+[node name="向日葵花瓣17" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(29, -11)
+rotation = 3.12508
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣18" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(19, -21)
+rotation = 3.12508
+texture = ExtResource("18_66ktc")
+
+[node name="向日葵花瓣19" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(10, -25)
+rotation = 3.1266
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣20" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(24, -17)
+rotation = 3.12508
+texture = ExtResource("17_0y7xn")
+
+[node name="向日葵花瓣21" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(32, 5)
+rotation = -1.46845
+texture = ExtResource("19_qd7d4")
+
+[node name="向日葵花瓣22" type="Sprite2D" parent="Body/Node2D2/向日葵表情2"]
+position = Vector2(3, -27)
+rotation = 2.54832
+texture = ExtResource("18_66ktc")

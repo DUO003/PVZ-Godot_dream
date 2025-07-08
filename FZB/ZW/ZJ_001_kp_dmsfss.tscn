@@ -1,0 +1,266 @@
+[gd_scene load_steps=24 format=3 uid="uid://d2tdv13tka3y6"]
+
+[ext_resource type="Texture2D" uid="uid://d0hpo2yp78fwc" path="res://assets/image/plant/plantshadow.png" id="3_f5tng"]
+[ext_resource type="Texture2D" uid="uid://cy3xu8ug3gd2" path="res://assets/reanim/PeaShooter_backleaf.png" id="4_cy1f0"]
+[ext_resource type="Texture2D" uid="uid://cyknr5ymersct" path="res://assets/reanim/PeaShooter_backleaf_lefttip.png" id="5_31hgb"]
+[ext_resource type="Texture2D" uid="uid://i7fngqj5l36a" path="res://assets/reanim/PeaShooter_backleaf_righttip.png" id="6_ktg6g"]
+[ext_resource type="Texture2D" uid="uid://300aew7liup" path="res://assets/reanim/PeaShooter_frontleaf.png" id="7_b3wdm"]
+[ext_resource type="Texture2D" uid="uid://nj6m28m6k5p1" path="res://assets/reanim/PeaShooter_frontleaf_righttip.png" id="8_6kv0t"]
+[ext_resource type="Texture2D" uid="uid://dit0i5evvco14" path="res://assets/reanim/PeaShooter_frontleaf_lefttip.png" id="9_wn0yi"]
+[ext_resource type="Texture2D" uid="uid://bu8g84fe1ni48" path="res://assets/reanim/PeaShooter_stalk_top.png" id="10_lwlar"]
+[ext_resource type="Texture2D" uid="uid://yxv2bpco6d57" path="res://assets/reanim/PeaShooter_stalk_bottom.png" id="11_5ssiv"]
+[ext_resource type="Texture2D" uid="uid://cyyk1hmvx7u05" path="res://assets/reanim/anim_sprout.png" id="12_laklw"]
+[ext_resource type="Texture2D" uid="uid://b00drwni3ja82" path="res://assets/reanim/PeaShooter_Head.png" id="13_f4vjs"]
+[ext_resource type="Texture2D" uid="uid://txlm4fwvygkx" path="res://assets/reanim/PeaShooter_mouth.png" id="14_cxfxe"]
+[ext_resource type="Texture2D" uid="uid://dp8034ogayq0f" path="res://assets/reanim/PeaShooter_blink1.png" id="15_wxisi"]
+[ext_resource type="Texture2D" uid="uid://c4rbih2yuv0vx" path="res://assets/image/projectile/ProjectilePea.png" id="16_5vtbe"]
+[ext_resource type="Texture2D" uid="uid://kepd2pc6jyeu" path="res://assets/ZJ/reanim/SunFlower_head.png" id="17_2n8n2"]
+[ext_resource type="Texture2D" uid="uid://bskk2lwgfubh8" path="res://assets/ZJ/reanim/SunFlower_leftpetal1.png" id="18_0jffx"]
+[ext_resource type="Texture2D" uid="uid://ci7fyco2cl21k" path="res://assets/ZJ/reanim/SunFlower_leftpetal2.png" id="19_i8bry"]
+[ext_resource type="Texture2D" uid="uid://btsp4eju7ct82" path="res://assets/ZJ/reanim/SunFlower_leftpetal3.png" id="20_20uj8"]
+[ext_resource type="Texture2D" uid="uid://dfegsngbdg5ri" path="res://assets/ZJ/reanim/SunFlower_leftpetal4.png" id="21_ntxbd"]
+[ext_resource type="Texture2D" uid="uid://bs1evme0ijx2" path="res://assets/ZJ/reanim/SunFlower_leftpetal5.png" id="22_nvuv8"]
+[ext_resource type="Texture2D" uid="uid://dc8vmjxsn0tcs" path="res://assets/ZJ/reanim/SunFlower_leftpetal6.png" id="23_oauod"]
+[ext_resource type="Texture2D" uid="uid://dld8cbh727a1y" path="res://assets/ZJ/reanim/SunFlower_leftpetal7.png" id="24_uo8v6"]
+[ext_resource type="Texture2D" uid="uid://qeygavcr5i8q" path="res://assets/ZJ/reanim/SunFlower_leftpetal8.png" id="25_5427d"]
+
+[node name="dmsfss" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Body" type="Node2D" parent="."]
+position = Vector2(-43, -45)
+
+[node name="通用" type="Node2D" parent="Body"]
+position = Vector2(41, 70)
+
+[node name="shadow" type="Sprite2D" parent="Body/通用"]
+texture = ExtResource("3_f5tng")
+
+[node name="Backleaf" type="Sprite2D" parent="Body/通用"]
+position = Vector2(-13.7, -17.9)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("4_cy1f0")
+centered = false
+
+[node name="Backleaf_left_tip" type="Sprite2D" parent="Body/通用"]
+position = Vector2(-16.4, -17)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("5_31hgb")
+centered = false
+
+[node name="Backleaf_right_tip" type="Sprite2D" parent="Body/通用"]
+position = Vector2(5.7, -18)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("6_ktg6g")
+centered = false
+
+[node name="Frontleaf" type="Sprite2D" parent="Body/通用"]
+position = Vector2(-18.6, -16.5)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("7_b3wdm")
+centered = false
+
+[node name="Frontleaf_right_tip" type="Sprite2D" parent="Body/通用"]
+position = Vector2(14.9, -14.9)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("8_6kv0t")
+centered = false
+
+[node name="Frontleaf_tip_left" type="Sprite2D" parent="Body/通用"]
+position = Vector2(-22, -9.3)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("9_wn0yi")
+centered = false
+
+[node name="豌豆射手" type="Node2D" parent="Body"]
+position = Vector2(19, -24)
+
+[node name="Node2D" type="Node2D" parent="Body/豌豆射手"]
+position = Vector2(24, 85)
+rotation = 0.300601
+scale = Vector2(0.730729, 2.07556)
+skew = 0.317961
+
+[node name="藤蔓上" type="Sprite2D" parent="Body/豌豆射手/Node2D"]
+position = Vector2(-11, -17)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("10_lwlar")
+centered = false
+
+[node name="藤蔓下" type="Sprite2D" parent="Body/豌豆射手/Node2D"]
+position = Vector2(-5.9, -9.7)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("11_5ssiv")
+centered = false
+
+[node name="豌豆射手" type="Sprite2D" parent="Body/豌豆射手"]
+position = Vector2(38.0367, 61.2279)
+scale = Vector2(0.9, 0.9)
+centered = false
+
+[node name="stem_correct" type="Node2D" parent="Body/豌豆射手/豌豆射手"]
+position = Vector2(-37.6, -48.7)
+
+[node name="Anim_sprout" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+position = Vector2(7.4, 26.7)
+rotation = -0.258309
+scale = Vector2(0.799, 0.799)
+texture = ExtResource("12_laklw")
+centered = false
+
+[node name="Anim_face" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+position = Vector2(19.1, 14)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("13_f4vjs")
+centered = false
+
+[node name="Idle_mouth" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+position = Vector2(52.4, 13.9)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("14_cxfxe")
+centered = false
+
+[node name="Idle_shoot_blink" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+centered = false
+
+[node name="Anim_blink" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+visible = false
+position = Vector2(38.0088, 21.4377)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("15_wxisi")
+centered = false
+
+[node name="Projectile" type="Sprite2D" parent="Body/豌豆射手/豌豆射手/stem_correct"]
+visible = false
+position = Vector2(60.9452, 30.6411)
+texture = ExtResource("16_5vtbe")
+
+[node name="向日葵" type="Node2D" parent="Body"]
+position = Vector2(-2, 1)
+
+[node name="向日葵表情" type="Sprite2D" parent="Body/向日葵"]
+z_index = 1
+position = Vector2(22.9118, 30.2279)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("17_2n8n2")
+
+[node name="向日葵花瓣1" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-18, -19)
+texture = ExtResource("18_0jffx")
+
+[node name="向日葵花瓣2" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-12, -23)
+texture = ExtResource("19_i8bry")
+
+[node name="向日葵花瓣3" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-31, -8)
+texture = ExtResource("20_20uj8")
+
+[node name="向日葵花瓣4" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-25, -15)
+texture = ExtResource("21_ntxbd")
+
+[node name="向日葵花瓣5" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-34, 2)
+texture = ExtResource("22_nvuv8")
+
+[node name="向日葵花瓣6" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-24, 18)
+texture = ExtResource("23_oauod")
+
+[node name="向日葵花瓣7" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-17, 23)
+texture = ExtResource("24_uo8v6")
+
+[node name="向日葵花瓣8" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-8, 25)
+rotation = 0.00152363
+texture = ExtResource("25_5427d")
+
+[node name="向日葵花瓣9" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-30, 12)
+texture = ExtResource("23_oauod")
+
+[node name="向日葵花瓣10" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(3.8147e-06, 26)
+rotation = -0.576763
+texture = ExtResource("24_uo8v6")
+
+[node name="向日葵花瓣11" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(-5, -26)
+rotation = 2.84386
+texture = ExtResource("25_5427d")
+
+[node name="向日葵花瓣12" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(16, 21)
+rotation = 3.12508
+texture = ExtResource("18_0jffx")
+
+[node name="向日葵花瓣13" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(22, 18)
+rotation = 3.12508
+texture = ExtResource("19_i8bry")
+
+[node name="向日葵花瓣14" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(29, 14)
+rotation = 3.12508
+texture = ExtResource("20_20uj8")
+
+[node name="向日葵花瓣15" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(9, 26)
+rotation = 3.62444
+texture = ExtResource("21_ntxbd")
+
+[node name="向日葵花瓣16" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(34, -3)
+rotation = 3.12508
+texture = ExtResource("22_nvuv8")
+
+[node name="向日葵花瓣17" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(29, -11)
+rotation = 3.12508
+texture = ExtResource("23_oauod")
+
+[node name="向日葵花瓣18" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(19, -21)
+rotation = 3.12508
+texture = ExtResource("24_uo8v6")
+
+[node name="向日葵花瓣19" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(10, -25)
+rotation = 3.1266
+texture = ExtResource("25_5427d")
+
+[node name="向日葵花瓣20" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(24, -17)
+rotation = 3.12508
+texture = ExtResource("23_oauod")
+
+[node name="向日葵花瓣21" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(32, 5)
+rotation = -1.46845
+texture = ExtResource("25_5427d")
+
+[node name="向日葵花瓣22" type="Sprite2D" parent="Body/向日葵/向日葵表情"]
+position = Vector2(3, -27)
+rotation = 2.54832
+texture = ExtResource("24_uo8v6")
+
+[node name="Node2D" type="Node2D" parent="Body/向日葵"]
+position = Vector2(42, 60)
+rotation = -0.520727
+scale = Vector2(0.820961, 1.61063)
+
+[node name="藤蔓上" type="Sprite2D" parent="Body/向日葵/Node2D"]
+position = Vector2(-23, -22)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("10_lwlar")
+centered = false
+offset = Vector2(23.4234, 9.00901)
+
+[node name="藤蔓下" type="Sprite2D" parent="Body/向日葵/Node2D"]
+position = Vector2(-23, -22)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("11_5ssiv")
+centered = false
+offset = Vector2(32.6126, 22.1622)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=46 format=3 uid="uid://cu0wuqktyhssa"]
 
 [ext_resource type="Animation" uid="uid://eg5i0srekcuo" path="res://animation/character/plant/003_cherry_bomb/CherryBomb_explode.tres" id="1_anim"]
-[ext_resource type="Script" uid="uid://b7vg4ofxajdtb" path="res://scripts/character/plant/003_cherry_bomb.gd" id="1_fj2s8"]
+[ext_resource type="Script" uid="uid://b7vg4ofxajdtb" path="res://scripts/Character/plant/003_cherry_bomb.gd" id="1_fj2s8"]
 [ext_resource type="Animation" uid="uid://b2a3f5y4dudyi" path="res://animation/character/plant/003_cherry_bomb/CherryBomb_idle.tres" id="2_anim"]
 [ext_resource type="Texture2D" uid="uid://dvuugtbourjhs" path="res://assets/reanim/CherryBomb_leftstem.png" id="2_ocibd"]
 [ext_resource type="Texture2D" uid="uid://bmpuc6vb6mfpk" path="res://assets/reanim/CherryBomb_left1.png" id="3_gijk3"]

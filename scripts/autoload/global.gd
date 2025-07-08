@@ -31,14 +31,17 @@ enum CharacterType {Plant, Zombie}
 
 #region 卡片
 enum CardInfoAttribute {
-	CoolTime,
-	SunCost,	
+	CoolTime,#冷却
+	SunCost,#阳光
+	能量,#释放大招需求的能量
+	占用,#大招需要占用能量条时长
+	类型,#1对植物本体使用，0对卡槽使用
 }
 
 var CardInfo = {
 	PlantType.PeaShooterSingle: {
 		CardInfoAttribute.CoolTime: 2.0,
-		CardInfoAttribute.SunCost: 100
+		CardInfoAttribute.SunCost: 100,
 		},
 	PlantType.SunFlower: {
 		CardInfoAttribute.CoolTime: 2.0,
@@ -104,6 +107,27 @@ var CardInfo = {
 		CardInfoAttribute.CoolTime: 2.0,
 		CardInfoAttribute.SunCost: 325
 		},
+	PlantType.dmsfss: {#带妹上分射手
+		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.SunCost: 125,
+		CardInfoAttribute.能量: 25,
+		CardInfoAttribute.占用: 30,
+		CardInfoAttribute.类型: 1,
+		},
+	PlantType.ygtdl: {#阳光土豆雷
+		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.SunCost: 0,
+		CardInfoAttribute.能量: 10,
+		CardInfoAttribute.占用: 30,
+		CardInfoAttribute.类型: 0,
+		},
+	PlantType.ygzd: {#阳光炸弹
+		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.SunCost: -200,
+		CardInfoAttribute.能量: 50,
+		CardInfoAttribute.占用: 80,
+		CardInfoAttribute.类型: 0,
+		},
 }
 
 
@@ -130,6 +154,10 @@ enum PlantType {
 	LilyPad,
 	Squash,
 	ThreePeater,
+	#杂交版本
+	dmsfss,
+	ygtdl,
+	ygzd,
 	}
 
 var PlantTypeSceneMap = {
@@ -150,6 +178,9 @@ var PlantTypeSceneMap = {
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom.tscn"),
 	PlantType.ThreePeater: preload("res://scenes/character/plant/019_three_peater.tscn"),
+	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_dmsfss.tscn"),
+	PlantType.ygtdl: preload("res://FZB/ZW/ZJ_002_ygtdl.tscn"),
+	PlantType.ygzd: preload("res://FZB/ZW/zj_003_ygzd.tscn"),
 }
 
 var StaticPlantTypeSceneMap = {
@@ -170,6 +201,9 @@ var StaticPlantTypeSceneMap = {
 	PlantType.IceShroom: preload("res://scenes/character/plant/015_ice_shroom_static.tscn"),
 	PlantType.DoomShroom: preload("res://scenes/character/plant/016_doom_shroom_static.tscn"),
 	PlantType.ThreePeater: preload("res://scenes/character/plant/019_three_peater_static.tscn"),
+	PlantType.dmsfss: preload("res://FZB/ZW/ZJ_001_kp_dmsfss.tscn"),
+	PlantType.ygtdl: preload("res://FZB/ZW/ZJ_002_kp_ygtdl.tscn"),
+	PlantType.ygzd: preload("res://FZB/ZW/zj_003_kp_ygzd.tscn"),
 }
 
 #endregion
@@ -313,6 +347,9 @@ var curr_plant = [
 	PlantType.IceShroom,
 	PlantType.DoomShroom,
 	PlantType.ThreePeater,
+	PlantType.dmsfss,
+	PlantType.ygtdl,
+	PlantType.ygzd,
 ]
 
 

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+"全局放置"="*res://FZB/逻辑代码/全局放置.gd"
 Global="*res://scripts/autoload/global.gd"
 SoundManager="*res://scenes/manager/sound_manager.tscn"
 
