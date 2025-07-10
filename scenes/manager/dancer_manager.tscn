@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://diwpbhs80tudu"]
 
-[ext_resource type="Script" uid="uid://bev10k0po7nhh" path="res://scripts/character/zombie/009_dancer_manager.gd" id="1_5vs8p"]
+[ext_resource type="Script" uid="uid://bev10k0po7nhh" path="res://scripts/Character/Zombie/009_dancer_manager.gd" id="1_5vs8p"]
 
 [sub_resource type="Animation" id="Animation_20c57"]
 length = 0.833342

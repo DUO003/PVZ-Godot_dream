@@ -70,7 +70,8 @@ func resume_game():
 ## 返回主菜单
 func return_main_menu():
 	get_tree().paused = false
-	get_tree().change_scene_to_file(Global.MainScenesMap[Global.MainScenes.StartMenu])
+	#get_tree().change_scene_to_file(Global.MainScenesMap[Global.MainScenes.StartMenu])
+	get_tree().change_scene_to_file("res://FZB/场景/放置版主菜单.tscn")
 
 ## 功能未实现
 func _unrealized():

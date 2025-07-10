@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="GodotPVZ-Dream_me"
-run/main_scene="uid://dc1xvxus2co66"
+config/name="PVZ放置版"
+config/description="基于植物大战僵尸多个改编的综合改版。"
+config/version="0.0.1"
+run/main_scene="uid://7xprxvffc67s"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/fullsize=false
+boot_splash/image="uid://cv4pdm0v3lvbt"
+config/icon="uid://cv4pdm0v3lvbt"
 
 [autoload]
 
@@ -38,6 +42,10 @@ enabled=PackedStringArray("res://addons/R2Ga_PVZ/plugin.cfg", "res://addons/anim
 [global_group]
 
 Zombie=""
+
+[internationalization]
+
+locale/locale_filter_mode=0
 
 [layer_names]
 
