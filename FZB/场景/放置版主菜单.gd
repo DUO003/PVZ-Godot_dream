@@ -6,6 +6,7 @@ class_name 放置版主菜单
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#Dialogic.start("res://FZB/对话/前院告急1-1.dtl")
 	$Cloud/AnimationPlayer.play("Idle")
 	$BG_Right/杂草分组/AnimationPlayer.play("Idle")
 	$AnimationPlayer.play("Idle")
@@ -15,7 +16,6 @@ func _ready() -> void:
 	
 	Global.time_scale = 1.0
 	Engine.time_scale = Global.time_scale
-
 
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

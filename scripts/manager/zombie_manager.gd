@@ -18,7 +18,7 @@ var flag_front_wave := false	#是否为旗前波
 		return curr_zombie_num
 	set(v):
 		curr_zombie_num=v
-		label_zombie_sum.text = "当前僵尸数量：" + str(curr_zombie_num)
+		label_zombie_sum.text = "僵尸：" + str(curr_zombie_num)
 		
 
 
@@ -34,7 +34,7 @@ var flag_front_wave := false	#是否为旗前波
 ## 每秒进度条更新计时器
 @onready var one_wave_progress_timer: Timer = $OneWaveProgressTimer
 
-@onready var label_zombie_sum: Label = $LabelZombieSum
+@onready var label_zombie_sum: Label = $FlagProgressBar/LabelZombieSum
 
 ## 是否为最后一波
 @export var end_wave:= false
@@ -62,13 +62,13 @@ var spawn_list = []
 var zombie_power = {
 	Global.ZombieType.ZombieNorm: 1,        # 普僵战力
 	Global.ZombieType.ZombieFlag: 1,        # 旗帜战力
-	Global.ZombieType.ZombieCone: 2,        # 路障战力
+	Global.ZombieType.ZombieCone: 1,        # 路障战力
 	Global.ZombieType.ZombiePoleVaulter: 2, # 撑杆战力
-	Global.ZombieType.ZombieBucket: 4,      # 铁桶战力
-	Global.ZombieType.ZombiePaper: 4,       # 读报战力
-	Global.ZombieType.ZombieScreenDoor: 4,      # 铁门战力
-	Global.ZombieType.ZombieFootball: 4,       # 橄榄球战力
-	Global.ZombieType.ZombieJackson: 4,       # 舞王战力
+	Global.ZombieType.ZombieBucket: 2,      # 铁桶战力
+	Global.ZombieType.ZombiePaper: 2,       # 读报战力
+	Global.ZombieType.ZombieScreenDoor: 2,      # 铁门战力
+	Global.ZombieType.ZombieFootball: 3,       # 橄榄球战力
+	Global.ZombieType.ZombieJackson: 3,       # 舞王战力
 }
 
 # 创建 zombie_weights 字典，存储初始权重
@@ -135,6 +135,22 @@ func display_zombie_HP_label():
 
 	
 #region 生成僵尸列表
+
+func 替换僵尸出怪():
+	# 获取全局放置.关卡权重字典
+	var level_weights = 全局放置.关卡权重
+	
+	# 遍历关卡权重字典
+	for zombie_type in level_weights.keys():
+		# 检查当前僵尸类型是否存在于默认权重字典中
+		if zombie_weights.has(zombie_type):
+			# 如果存在，则用关卡权重替换默认权重
+			zombie_weights[zombie_type] = level_weights[zombie_type]
+			print("已替换权重: ", zombie_type, " = ", zombie_weights[zombie_type])
+		else:
+			# 如果不存在，则跳过
+			print("跳过未知僵尸类型: ", zombie_type)
+
 # 生成100波出怪列表，每波最多50只僵尸
 func create_spawn_list():
 	"""

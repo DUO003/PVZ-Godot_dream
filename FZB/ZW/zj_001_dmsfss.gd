@@ -12,6 +12,8 @@ class_name dmsfss
 @export var 子弹列表 = ["豌豆"]
 @export var 弹道列表 = [0]
 @export var 攻击状态 = 0
+@export var 标签 = ["阳光植物"]
+
 @onready var 子弹位置 :Node2D = $"豌豆"
 @onready var 动画节点: AnimationTree = $AnimationTree
 @onready var 射线节点: RayCast2D = $RayCast2D

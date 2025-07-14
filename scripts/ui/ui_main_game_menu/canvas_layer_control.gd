@@ -63,3 +63,7 @@ func _on_check_box_6_toggled(toggled_on: bool) -> void:
 	Global.save_config()
 	main_game.display_zombie_HP_label()
 	
+
+
+func _on_button_4_button_up() -> void:
+	visible = true

@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://bd3w3y5b02dut" path="res://scripts/ui/main_game_ui/card_bar.gd" id="8_ifnc6"]
 [ext_resource type="Texture2D" uid="uid://hvvk2fdgo3pw" path="res://assets/image/ui/ui_card/SeedBank.png" id="8_xvvqk"]
 [ext_resource type="Texture2D" uid="uid://dw6btivnki0kt" path="res://assets/image/ui/ui_card/SeedPacketSilhouette.png" id="10_mddbc"]
-[ext_resource type="Texture2D" uid="uid://bgy071auro307" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Background.png" id="12_8fvtd"]
 [ext_resource type="Texture2D" uid="uid://47ixd5hsddft" path="res://assets/image/ui/ui_card/ShovelBank.png" id="12_tjo6j"]
 [ext_resource type="Script" uid="uid://drl7ywtxslsbm" path="res://scripts/ui/card/shovel_in_ui.gd" id="13_yy6tc"]
+[ext_resource type="Texture2D" uid="uid://dy6ahwdeuiwag" path="res://assets/ZJ/images/SeedChooser_Background.png" id="14_b4qea"]
 [ext_resource type="PackedScene" uid="uid://brnfbv2sxv2qh" path="res://scenes/ui/plant_cell.tscn" id="14_ifnc6"]
 [ext_resource type="Texture2D" uid="uid://gy84wwo8bimw" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow2.png" id="14_yy6tc"]
 [ext_resource type="Texture2D" uid="uid://b1fuu1s6nfxnq" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow.png" id="15_dc1ex"]
@@ -450,9 +450,9 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = 15.0
-offset_right = 498.0
-offset_bottom = 526.0
+offset_top = 23.0
+offset_right = 709.0
+offset_bottom = 534.0
 grow_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/CardManager/CardChooser"]
@@ -467,17 +467,17 @@ offset_top = -513.0
 offset_right = 232.5
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("12_8fvtd")
+texture = ExtResource("14_b4qea")
 
 [node name="GridContainer" type="GridContainer" parent="Camera2D/CardManager/CardChooser/TextureRect"]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 32.0
-offset_right = 450.0
-offset_bottom = 449.0
-theme_override_constants/h_separation = 5
+offset_right = 599.0
+offset_bottom = 452.0
+theme_override_constants/h_separation = 3
 theme_override_constants/v_separation = 0
-columns = 8
+columns = 11
 
 [node name="CardPlaceholder" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
 custom_minimum_size = Vector2(50, 70)
@@ -665,10 +665,102 @@ layout_mode = 2
 texture = ExtResource("10_mddbc")
 
 [node name="CardPlaceholder47" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("10_mddbc")
 
 [node name="CardPlaceholder48" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder49" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder50" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder51" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder52" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder53" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder54" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder55" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder56" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder57" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder58" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder59" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder60" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder61" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder62" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder63" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder64" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder65" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder66" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder67" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder68" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder69" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_mddbc")
+
+[node name="CardPlaceholder70" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
 layout_mode = 2
 texture = ExtResource("10_mddbc")
 
@@ -719,24 +811,24 @@ one_shot = true
 
 [node name="OneWaveProgressTimer" type="Timer" parent="Manager/ZombieManager"]
 
-[node name="LabelZombieSum" type="Label" parent="Manager/ZombieManager"]
-z_index = 1000
-z_as_relative = false
-offset_left = 441.0
-offset_top = 571.0
-offset_right = 600.0
-offset_bottom = 601.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 21
-text = "当前僵尸数量：0"
-
 [node name="FlagProgressBar" parent="Manager/ZombieManager" instance=ExtResource("16_dc1ex")]
 visible = false
 z_index = 1000
-offset_left = 614.0
+offset_left = 909.0
 offset_top = 575.0
-offset_right = 614.0
+offset_right = 909.0
 offset_bottom = 575.0
+
+[node name="LabelZombieSum" type="Label" parent="Manager/ZombieManager/FlagProgressBar"]
+z_index = 1000
+z_as_relative = false
+offset_left = 2.0
+offset_top = -24.0
+offset_right = 161.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "僵尸：0"
 
 [node name="SFX" type="Control" parent="Manager/ZombieManager"]
 layout_mode = 3
@@ -1121,17 +1213,17 @@ use_parent_material = false
 clip_contents = false
 custom_minimum_size = Vector2(0, 0)
 layout_direction = 0
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
 anchor_top = 0.0
-anchor_right = 0.0
+anchor_right = 1.0
 anchor_bottom = 0.0
-offset_left = 694.0
+offset_left = -104.0
 offset_top = 0.0
-offset_right = 798.0
+offset_right = 0.0
 offset_bottom = 38.0
-grow_horizontal = 1
+grow_horizontal = 0
 grow_vertical = 1
 rotation = 0.0
 scale = Vector2(1, 1)
@@ -1713,7 +1805,7 @@ position = Vector2(1, 572)
 script = ExtResource("46_b4qea")
 
 [node name="货币栏" type="Sprite2D" parent="资源管理"]
-position = Vector2(66, 6)
+position = Vector2(74, 6)
 texture = ExtResource("46_vyo3a")
 region_enabled = true
 region_rect = Rect2(136, 0, 132, 43)
@@ -1729,19 +1821,30 @@ theme_override_font_sizes/font_size = 20
 text = "999990"
 vertical_alignment = 1
 
+[node name="关卡名称" type="Label" parent="资源管理"]
+offset_left = 781.0
+offset_right = 901.0
+offset_bottom = 28.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "测试关卡名称"
+vertical_alignment = 1
+
 [connection signal="mouse_entered" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg/Button" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_button_pressed"]
 [connection signal="pressed" from="Camera2D/CardManager/CardChooser/TextureRect/TextureButton" to="." method="cheeosed_card_start_game"]
+[connection signal="pressed" from="Camera2D/CardManager/CardChooser/TextureRect/TextureButton" to="资源管理" method="_游戏开始"]
 [connection signal="timeout" from="Manager/ZombieManager/WaveTimer" to="Manager/ZombieManager" method="_on_WaveTimer_timeout"]
 [connection signal="timeout" from="Manager/ZombieManager/OneWaveProgressTimer" to="Manager/ZombieManager" method="_on_one_wave_progress_timer_timeout"]
 [connection signal="area_entered" from="Background/Area2DHome" to="Background/Area2DHome" method="_on_area_entered"]
 [connection signal="pressed" from="Background/Area2DHome/Dialog/PVZButton" to="Background/Area2DHome" method="resume_game"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuButton" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="appear_menu"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button1" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="encyclopedia"]
-[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4" to="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4/CanvasLayer" method="appear_canvas_layer_control"]
+[connection signal="button_up" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4" to="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4/CanvasLayer" method="_on_button_4_button_up"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button2" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="resume_game"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button3" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_main_menu"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Return" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_button_pressed"]

@@ -57,7 +57,10 @@ var main_game_progress:MainGameProgress
 @export_subgroup("出怪参数")
 ## 游戏出怪波次，每10波生成1旗帜
 @export var max_wave := 30
-
+@export var 旗帜列表 : Array = ["红旗"]
+@export var 旗帜前保护时间 = 3
+@export var 旗帜后保护时间 = 2
+@export var 出怪权重调整 : Dictionary  = {}
 ## **统一的僵尸种类刷新列表**，这将定义整局游戏每波可以刷新的僵尸种类
 @export var zombie_refresh_types : Array[Global.ZombieType] = [
 	Global.ZombieType.ZombieNorm,       # 普通僵尸
@@ -65,9 +68,23 @@ var main_game_progress:MainGameProgress
 	Global.ZombieType.ZombieCone,       # 路障僵尸
 	Global.ZombieType.ZombiePoleVaulter, # 撑杆僵尸
 	Global.ZombieType.ZombieBucket,      # 铁桶僵尸
-	Global.ZombieType.ZombiePaper      # 读报僵尸
-	
+	Global.ZombieType.ZombiePaper,      # 读报僵尸
+	Global.ZombieType.ZombieScreenDoor, # 铁门僵尸
+	Global.ZombieType.ZombieFootball,   # 橄榄球僵尸
+	Global.ZombieType.ZombieJackson,    # 跳舞僵尸
+	Global.ZombieType.ZombieDancer,     # 伴舞僵尸
+	Global.ZombieType.DuckytubeZombie,  # 潜水僵尸
 ]
+'''
+以下参数未实装
+红旗:3倍出怪
+黑旗:2倍出怪+出怪总生命*2
+蓝旗:2倍出怪+精英怪
+金旗:2倍出怪+资源僵尸
+
+旗帜前保护指一大波后冷却，叠加在出怪冷却上
+旗帜后保护指出完怪后保护时间，叠加在出怪冷却上
+'''
 #endregion
 
 #region 卡片参数
@@ -80,14 +97,14 @@ var main_game_progress:MainGameProgress
 #endregion
 
 #region 关卡参数
-## 当前已有的植物卡片在Global文件中
+## 当前已有的植物卡片在Global文件中,放置版的方法会覆盖这个
 @export_subgroup("关卡参数")
 
 ## 关卡背景
 @export var game_bg := Global.GameBg.FrontDay
 ## 夜晚初始生成的墓碑数量
-@export var init_tombstone_num := 5
-
+@export var init_tombstone_num := 0
+@export var 执行对话 = null
 
 #endregion
 
@@ -96,11 +113,44 @@ var main_game_progress:MainGameProgress
 @export_group("是否为测试场景")
 @export var is_test := false
 
+func 初始化关卡():
+	max_choosed_card_num=7#初始卡槽
+	if 全局放置.选中关卡 == 1:
+		执行对话="res://FZB/对话/前院告急1-1.dtl"
+		start_sun=400#初始阳光
+		max_wave=10# 波次
+		zombie_refresh_types= [
+			Global.ZombieType.ZombieNorm,       # 普通僵尸
+			#Global.ZombieType.ZombieFlag,       # 旗帜僵尸
+			#Global.ZombieType.ZombieCone,       # 路障僵尸
+			#Global.ZombieType.ZombiePoleVaulter, # 撑杆僵尸
+			#Global.ZombieType.ZombieBucket,      # 铁桶僵尸
+			#Global.ZombieType.ZombiePaper      # 读报僵尸
+			#Global.ZombieType.ZombieScreenDoor, # 铁门僵尸
+			#Global.ZombieType.ZombieFootball,   # 橄榄球僵尸
+			#Global.ZombieType.ZombieJackson,    # 跳舞僵尸
+			#Global.ZombieType.ZombieDancer,     # 伴舞僵尸
+			#Global.ZombieType.DuckytubeZombie,  # 潜水僵尸
+		]
+		旗帜列表 = ["红旗"]
+		旗帜前保护时间 = 3
+		旗帜后保护时间 = 2
+		出怪权重调整 = {
+			Global.ZombieType.ZombieNorm: 4000, 
+			}
 
+func 开始对话():
+	print("对话已开始")
+	Dialogic.start(执行对话)
+	
 
-
+func _enter_tree():
+	## 初始化关卡数据
+	初始化关卡()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+
 	## 初始化游戏，游戏背景
 	_init_main_game()
 	## 初始化僵尸管理器
@@ -111,6 +161,10 @@ func _ready() -> void:
 	control_panel.init_control_panel()
 	## 主游戏进程
 	main_game_progress = MainGameProgress.CHOOSE_CARD
+	
+	if 执行对话 != null:
+		开始对话()
+		await Dialogic.timeline_ended
 	
 	if not is_test:
 		SoundManager.play_bgm(bgm_choose_card)
@@ -200,7 +254,7 @@ func cheeosed_card_start_game():
 
 func start_game_move_camera():
 	# 移动相机查看僵尸
-	await camera_2d.move_to(Vector2(390, 0), 2)
+	await camera_2d.move_to(Vector2(114, 0), 0.5)
 	
 ## 显示植物血量
 func display_plant_HP_label():

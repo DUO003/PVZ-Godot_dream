@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://dj6puuosnoykc"]
+
+[ext_resource type="Script" uid="uid://bxeiokwq16l6w" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_cqr48"]
+
+[resource]
+script = ExtResource("1_cqr48")
+entries = {
+"New Entry 1": {
+"case_sensitive": true,
+"name": "New Entry 1"
+},
+"New Entry 2": {
+"name": "New Entry 2"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

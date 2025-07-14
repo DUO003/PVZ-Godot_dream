@@ -2,7 +2,7 @@ extends CardBase
 class_name Card
 
 ## 主游戏场景 目前用于是否为测试场景
-@onready var main_game: MainGameManager
+@onready var main_game
 
 @onready var _cool_mask: ProgressBar = $ProgressBar			# 冷却进度条
 @onready var _button: Button = $Button				# 卡片点击按钮
@@ -21,6 +21,7 @@ signal card_click		#点击信号
 
 
 func _ready() -> void:
+	#print("当前节点路径: ", self.get_path())  # 打印自身节点路径
 	main_game = get_tree().current_scene
 	# 测试场景卡片直接在卡片槽中
 	if main_game.is_test:

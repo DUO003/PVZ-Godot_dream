@@ -24,6 +24,7 @@ func _plant_free():
 			new_sun.sun_value = 阳光产量
 			new_sun._sun_scale(阳光产量)
 			new_sun.global_position = sun.global_position
+			new_sun.on_sun_tween_finished()#根据自动收集开关执行自动收集
 	super._plant_free()
 # 铲掉植物
 func be_shovel_kill():

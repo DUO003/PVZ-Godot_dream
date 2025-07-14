@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceg22isdm6qj1"]
+
+[ext_resource type="Script" uid="uid://b3aqc01slj7m" path="res://scripts/ui/ui_main_game_menu/canvas_layer_control.gd" id="1_tqqiv"]
+[ext_resource type="Theme" uid="uid://em12la0rqibq" path="res://PVZ_theme.tres" id="2_07cj1"]
+[ext_resource type="Texture2D" uid="uid://bb18ns7vpgnom" path="res://assets/image/ui/ui_level/Challenge_Background.jpg" id="3_ic85b"]
+[ext_resource type="Texture2D" uid="uid://xc3kqag3vqlq" path="res://assets/image/ui/ui_level/Almanac_CloseButton.png" id="4_a3nnk"]
+[ext_resource type="Texture2D" uid="uid://c82uuprowr5d" path="res://assets/image/ui/ui_level/Almanac_CloseButtonHighlight.png" id="5_3l1i1"]
+[ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="6_7a70u"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_tqqiv")
+
+[node name="OptionBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_07cj1")
+texture = ExtResource("3_ic85b")
+
+[node name="Label" type="Label" parent="OptionBG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_top = 30.0
+offset_right = 49.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 29
+text = "控制台"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionBG"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 130.0
+offset_right = 637.0
+offset_bottom = 281.0
+theme_override_constants/separation = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionBG/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="CheckBox" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "自动收集阳光"
+
+[node name="CheckBox2" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "自动收集金币（没做）"
+
+[node name="CheckBox3" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "隐藏未选择植物卡槽"
+
+[node name="CheckBox4" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "游戏全屏"
+
+[node name="CheckBox5" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "显示植物血量"
+
+[node name="CheckBox6" type="CheckBox" parent="OptionBG/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "显示僵尸血量"
+
+[node name="TextureButton" type="TextureButton" parent="OptionBG"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 534.0
+offset_right = 714.0
+offset_bottom = 560.0
+texture_normal = ExtResource("4_a3nnk")
+texture_pressed = ExtResource("5_3l1i1")
+texture_hover = ExtResource("5_3l1i1")
+texture_focused = ExtResource("5_3l1i1")
+texture_click_mask = ExtResource("6_7a70u")
+
+[node name="Label" type="Label" parent="OptionBG/TextureButton"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 1.0
+offset_right = 59.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "关闭"
+
+[connection signal="toggled" from="OptionBG/HBoxContainer/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="OptionBG/HBoxContainer/VBoxContainer/CheckBox3" to="." method="_on_check_box_3_toggled"]
+[connection signal="toggled" from="OptionBG/HBoxContainer/VBoxContainer/CheckBox4" to="." method="_on_check_box_4_toggled"]
+[connection signal="toggled" from="OptionBG/HBoxContainer/VBoxContainer/CheckBox5" to="." method="_on_check_box_5_toggled"]
+[connection signal="toggled" from="OptionBG/HBoxContainer/VBoxContainer/CheckBox6" to="." method="_on_check_box_6_toggled"]
+[connection signal="pressed" from="OptionBG/TextureButton" to="." method="_on_texture_button_pressed"]

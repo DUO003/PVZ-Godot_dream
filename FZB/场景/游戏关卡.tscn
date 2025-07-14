@@ -1,0 +1,1808 @@
+[gd_scene load_steps=53 format=3 uid="uid://g041bomwox31"]
+
+[ext_resource type="Script" uid="uid://mo887n36qgbx" path="res://FZB/场景/游戏关卡.gd" id="1_xjwqo"]
+[ext_resource type="PackedScene" uid="uid://brnfbv2sxv2qh" path="res://scenes/ui/plant_cell.tscn" id="3_w741w"]
+[ext_resource type="PackedScene" uid="uid://cflpyoqris51r" path="res://scenes/fx/doom_shroom_crater.tscn" id="4_mpefu"]
+[ext_resource type="PackedScene" uid="uid://dv5fiu4pkryba" path="res://scenes/item/game_scenes_item/lawn_mower.tscn" id="5_us51u"]
+[ext_resource type="Script" uid="uid://btsav2t1xoy5k" path="res://FZB/场景/游戏相机2d.gd" id="5_xjwqo"]
+[ext_resource type="Script" uid="uid://cflrxmf72y6tu" path="res://FZB/场景/选卡逻辑.gd" id="6_480hm"]
+[ext_resource type="Texture2D" uid="uid://hvvk2fdgo3pw" path="res://assets/image/ui/ui_card/SeedBank.png" id="8_mc3p0"]
+[ext_resource type="Script" uid="uid://ceru8avwrxa7l" path="res://FZB/场景/卡槽执行代码.gd" id="8_xhgkl"]
+[ext_resource type="Texture2D" uid="uid://dw6btivnki0kt" path="res://assets/image/ui/ui_card/SeedPacketSilhouette.png" id="10_8lsfx"]
+[ext_resource type="Texture2D" uid="uid://47ixd5hsddft" path="res://assets/image/ui/ui_card/ShovelBank.png" id="11_oxq57"]
+[ext_resource type="Script" uid="uid://cyv432sxqgwkp" path="res://FZB/场景/铲子执行代码.gd" id="11_w741w"]
+[ext_resource type="Texture2D" uid="uid://dh1c6v7dpaxmd" path="res://assets/image/ui/ui_card/Shovel.png" id="13_kbor1"]
+[ext_resource type="Texture2D" uid="uid://dy6ahwdeuiwag" path="res://assets/ZJ/images/SeedChooser_Background.png" id="14_4cb0m"]
+[ext_resource type="Texture2D" uid="uid://b1fuu1s6nfxnq" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow.png" id="15_sjtjg"]
+[ext_resource type="Texture2D" uid="uid://gy84wwo8bimw" path="res://assets/image/ui/ui_card/all_card/SeedChooser_Button_Glow2.png" id="16_0d5hu"]
+[ext_resource type="Script" uid="uid://dbfjty5klcw5y" path="res://FZB/场景/一起摇滚代码.gd" id="16_mpefu"]
+[ext_resource type="Script" uid="uid://dh3vacnxywjh3" path="res://FZB/场景/植物种植.gd" id="17_480hm"]
+[ext_resource type="Script" uid="uid://parybxg7tb1k" path="res://scripts/ui/PVZ_button_base.gd" id="17_ua7i5"]
+[ext_resource type="Script" uid="uid://xfs2er34x0jf" path="res://FZB/场景/出怪逻辑.gd" id="18_xhgkl"]
+[ext_resource type="PackedScene" uid="uid://brbdbxg2tocla" path="res://scenes/ui/flag_progress_bar.tscn" id="20_45r1t"]
+[ext_resource type="AudioStream" uid="uid://b0a14btnqbv0l" path="res://assets/audio/SFX/zombie/groan/groan2.ogg" id="21_7kfej"]
+[ext_resource type="AudioStream" uid="uid://c1v38q1krjff6" path="res://assets/audio/SFX/zombie/groan/groan3.ogg" id="22_7olws"]
+[ext_resource type="AudioStream" uid="uid://ds0xvjrngfga7" path="res://assets/audio/SFX/zombie/groan/groan4.ogg" id="23_eofeo"]
+[ext_resource type="AudioStream" uid="uid://defpxdm4tuwyl" path="res://assets/audio/SFX/zombie/groan/groan5.ogg" id="24_sfkn4"]
+[ext_resource type="AudioStream" uid="uid://b74lc0i183mdq" path="res://assets/audio/SFX/zombie/groan/groan6.ogg" id="25_y27c2"]
+[ext_resource type="AudioStream" uid="uid://dwnat3mgf3tqo" path="res://assets/audio/SFX/zombie/groan/groan.ogg" id="26_abswg"]
+[ext_resource type="Texture2D" uid="uid://uh50cdkqdl67" path="res://assets/image/background/background1.jpg" id="27_qrdw4"]
+[ext_resource type="Script" uid="uid://c8vlhy0axw8nc" path="res://scripts/ui/main_game_ui/area_2d_home.gd" id="28_wcdl8"]
+[ext_resource type="Theme" uid="uid://em12la0rqibq" path="res://PVZ_theme.tres" id="29_juw5u"]
+[ext_resource type="PackedScene" uid="uid://c8bd2m73sdwhf" path="res://scenes/item/game_scenes_item/day_suns.tscn" id="30_xabmm"]
+[ext_resource type="Script" uid="uid://b4u8u06nw0j1" path="res://FZB/场景/警告提示.gd" id="31_us51u"]
+[ext_resource type="Texture2D" uid="uid://bll1o67ycmid6" path="res://assets/image/ui/ui_remind_word/StartReady.png" id="32_7n0yf"]
+[ext_resource type="Texture2D" uid="uid://daqyr7g1dgckt" path="res://assets/image/ui/ui_remind_word/StartSet.png" id="33_tqmlo"]
+[ext_resource type="Texture2D" uid="uid://bcv81qevn5hpt" path="res://assets/image/ui/ui_remind_word/StartPlant.png" id="34_xrwm3"]
+[ext_resource type="Texture2D" uid="uid://c4jwi8yjt7hmd" path="res://assets/image/ui/ui_remind_word/Approaching.png" id="35_rx5kb"]
+[ext_resource type="Texture2D" uid="uid://bp2ironyexkgp" path="res://assets/image/ui/ui_remind_word/FinalWave.png" id="36_jayta"]
+[ext_resource type="Texture2D" uid="uid://vcaw16pvdqga" path="res://assets/image/ui/ui_remind_word/ZombiesWon.png" id="37_nm8tm"]
+[ext_resource type="Script" uid="uid://bwp666ia1e8t7" path="res://scripts/fx/panel_color.gd" id="38_tixov"]
+[ext_resource type="Script" uid="uid://3j46ottso760" path="res://scripts/ui/main_game_ui/main_game_menu_button.gd" id="39_7ybbt"]
+[ext_resource type="Texture2D" uid="uid://toxyk2jadqam" path="res://assets/image/ui/ui_main_game_menu/option_dialog.png" id="40_lc8d4"]
+[ext_resource type="Script" uid="uid://djkmy1xylm8hs" path="res://scripts/ui/ui_main_game_menu/main_game_menu_option_dialog.gd" id="41_b6mtt"]
+[ext_resource type="PackedScene" uid="uid://ceg22isdm6qj1" path="res://FZB/场景/控制台.tscn" id="42_xhgkl"]
+[ext_resource type="Texture2D" uid="uid://blge6mwmus5fv" path="res://assets/image/ui/ui_main_game_menu/btn_dialog_back_2.png" id="43_nerx8"]
+[ext_resource type="Script" uid="uid://c6ptjf4r3qb4t" path="res://FZB/场景/控制台.gd" id="43_w741w"]
+[ext_resource type="BitMap" uid="uid://bhg7gejfpw036" path="res://assets/image/ui/ui_main_game_menu/btn_dialog_back_2_mask.png" id="44_ncqxd"]
+[ext_resource type="PackedScene" uid="uid://cp0kgnsx20pyh" path="res://scenes/ui/dialog.tscn" id="45_2k8iw"]
+[ext_resource type="Script" uid="uid://d2g7qgdt0ej3k" path="res://FZB/货币栏.gd" id="46_mver3"]
+[ext_resource type="Texture2D" uid="uid://cje7xdhcyt1cu" path="res://assets/ZJ/images/coin金币栏.png" id="47_5630y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x628s"]
+texture = ExtResource("8_mc3p0")
+texture_margin_left = 80.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbbka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy6tc"]
+size = Vector2(141, 602)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybhi1"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_xjwqo")
+
+[node name="PlantCells" type="Node2D" parent="."]
+z_index = 200
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlantCells"]
+layout_direction = 3
+offset_left = -776.0
+offset_top = 82.0
+offset_right = -45.0
+offset_bottom = 178.0
+mouse_filter = 2
+
+[node name="PlantCell" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Crater" parent="PlantCells/HBoxContainer/PlantCell" instance=ExtResource("4_mpefu")]
+
+[node name="PlantCell2" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell3" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell4" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell5" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell6" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell7" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell8" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell9" parent="PlantCells/HBoxContainer" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PlantCells"]
+layout_direction = 3
+offset_left = -776.0
+offset_top = 181.0
+offset_right = -45.0
+offset_bottom = 277.0
+
+[node name="PlantCell" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell2" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell3" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell4" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell5" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell6" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell7" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell8" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell9" parent="PlantCells/HBoxContainer2" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PlantCells"]
+layout_direction = 3
+offset_left = -776.0
+offset_top = 281.0
+offset_right = -45.0
+offset_bottom = 377.0
+
+[node name="PlantCell" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell2" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell3" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell4" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell5" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell6" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell7" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell8" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell9" parent="PlantCells/HBoxContainer3" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PlantCells"]
+layout_direction = 3
+offset_left = -776.0
+offset_top = 380.0
+offset_right = -45.0
+offset_bottom = 476.0
+
+[node name="PlantCell" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell2" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell3" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell4" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell5" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell6" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell7" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell8" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell9" parent="PlantCells/HBoxContainer4" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="PlantCells"]
+layout_direction = 3
+offset_left = -776.0
+offset_top = 478.0
+offset_right = -45.0
+offset_bottom = 574.0
+mouse_filter = 2
+
+[node name="PlantCell" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell2" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell3" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell4" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell5" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell6" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell7" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell8" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlantCell9" parent="PlantCells/HBoxContainer5" instance=ExtResource("3_w741w")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LawnMovers" type="Node2D" parent="."]
+z_index = 450
+
+[node name="LawnMover" parent="LawnMovers" instance=ExtResource("5_us51u")]
+position = Vector2(25, 151)
+
+[node name="LawnMover2" parent="LawnMovers" instance=ExtResource("5_us51u")]
+position = Vector2(25, 243)
+
+[node name="LawnMover3" parent="LawnMovers" instance=ExtResource("5_us51u")]
+position = Vector2(25, 341)
+
+[node name="LawnMover4" parent="LawnMovers" instance=ExtResource("5_us51u")]
+position = Vector2(25, 439)
+
+[node name="LawnMover5" parent="LawnMovers" instance=ExtResource("5_us51u")]
+position = Vector2(25, 542)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("5_xjwqo")
+
+[node name="CardManager" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 676.0
+offset_bottom = 600.0
+mouse_filter = 2
+script = ExtResource("6_480hm")
+
+[node name="CardBarAndShovel" type="HBoxContainer" parent="Camera2D/CardManager"]
+z_index = 100
+layout_mode = 0
+offset_left = 13.0
+offset_top = -94.0
+offset_right = 227.0
+offset_bottom = -4.0
+theme_override_constants/separation = 0
+
+[node name="CardBarBg" type="PanelContainer" parent="Camera2D/CardManager/CardBarAndShovel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x628s")
+script = ExtResource("8_xhgkl")
+
+[node name="SunLabelControl" type="Control" parent="Camera2D/CardManager/CardBarAndShovel/CardBarBg"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CurrSunValue" type="Label" parent="Camera2D/CardManager/CardBarAndShovel/CardBarBg/SunLabelControl"]
+layout_mode = 2
+offset_left = -101.0
+offset_top = 51.0
+offset_right = 14.0
+offset_bottom = 79.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "999990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardUiList" type="HBoxContainer" parent="Camera2D/CardManager/CardBarAndShovel/CardBarBg"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="CardPlaceholder_ori" type="TextureRect" parent="Camera2D/CardManager/CardBarAndShovel/CardBarBg/CardUiList"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Camera2D/CardManager/CardBarAndShovel"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 18
+
+[node name="ShovelBg" type="TextureRect" parent="Camera2D/CardManager/CardBarAndShovel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("11_oxq57")
+script = ExtResource("11_w741w")
+
+[node name="Shovel" type="TextureRect" parent="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_kbor1")
+
+[node name="Button" type="Button" parent="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jbbka")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jbbka")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jbbka")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jbbka")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jbbka")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jbbka")
+
+[node name="CardChooser" type="Control" parent="Camera2D/CardManager"]
+z_index = 1100
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 15.0
+offset_right = 498.0
+offset_bottom = 526.0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/CardManager/CardChooser"]
+layout_mode = 1
+offset_right = 704.0
+offset_bottom = 513.0
+texture = ExtResource("14_4cb0m")
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/CardManager/CardChooser/TextureRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 34.0
+offset_right = 593.0
+offset_bottom = 451.0
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = -1
+columns = 11
+
+[node name="CardPlaceholder" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+custom_minimum_size = Vector2(50, 70)
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder2" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder3" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder4" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder5" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder6" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder7" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder8" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder9" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder10" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder11" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder12" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder13" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder14" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder15" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder16" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder17" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder18" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder19" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder20" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder21" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder22" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder23" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder24" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder25" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder26" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder27" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder28" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder29" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder30" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder31" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder32" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder33" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder34" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder35" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder36" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder37" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder38" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder39" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder40" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder41" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder42" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder43" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder44" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder45" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder46" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder47" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder48" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder49" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder50" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder51" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder52" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder53" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder54" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder55" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder56" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder57" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder58" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder59" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder60" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder61" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder62" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder63" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder64" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder65" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="CardPlaceholder66" type="TextureRect" parent="Camera2D/CardManager/CardChooser/TextureRect/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_8lsfx")
+
+[node name="TextureButton" type="TextureButton" parent="Camera2D/CardManager/CardChooser/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.5
+offset_top = 202.5
+offset_right = 72.5
+offset_bottom = 244.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("15_sjtjg")
+texture_pressed = ExtResource("16_0d5hu")
+texture_hover = ExtResource("16_0d5hu")
+script = ExtResource("16_mpefu")
+
+[node name="TemporaryCard" type="Control" parent="Camera2D/CardManager"]
+z_index = 1150
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Manager" type="Node2D" parent="."]
+
+[node name="HandManager" type="Node2D" parent="Manager"]
+script = ExtResource("17_480hm")
+
+[node name="Shovel" type="Sprite2D" parent="Manager/HandManager"]
+visible = false
+z_index = 950
+z_as_relative = false
+position = Vector2(687, 67)
+texture = ExtResource("13_kbor1")
+centered = false
+offset = Vector2(-14, -70)
+
+[node name="ZombieManager" type="Node2D" parent="Manager"]
+script = ExtResource("18_xhgkl")
+
+[node name="WaveTimer" type="Timer" parent="Manager/ZombieManager"]
+one_shot = true
+
+[node name="OneWaveProgressTimer" type="Timer" parent="Manager/ZombieManager"]
+
+[node name="LabelZombieSum" type="Label" parent="Manager/ZombieManager"]
+z_index = 1000
+z_as_relative = false
+offset_left = 441.0
+offset_top = 571.0
+offset_right = 600.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "当前僵尸数量：0"
+
+[node name="FlagProgressBar" parent="Manager/ZombieManager" instance=ExtResource("20_45r1t")]
+visible = false
+z_index = 1000
+offset_left = 614.0
+offset_top = 575.0
+offset_right = 614.0
+offset_bottom = 575.0
+
+[node name="SFX" type="Control" parent="Manager/ZombieManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Groan2" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("21_7kfej")
+bus = &"SFX"
+
+[node name="Groan3" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("22_7olws")
+bus = &"SFX"
+
+[node name="Groan4" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("23_eofeo")
+bus = &"SFX"
+
+[node name="Groan5" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("24_sfkn4")
+bus = &"SFX"
+
+[node name="Groan6" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("25_y27c2")
+bus = &"SFX"
+
+[node name="Groan" type="AudioStreamPlayer" parent="Manager/ZombieManager/SFX"]
+stream = ExtResource("26_abswg")
+bus = &"SFX"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(493, 0)
+texture = ExtResource("27_qrdw4")
+offset = Vector2(0, 300)
+
+[node name="Area2DHome" type="Area2D" parent="Background"]
+process_mode = 3
+position = Vector2(-624, 8)
+collision_mask = 20
+script = ExtResource("28_wcdl8")
+
+[node name="Dialog" type="Control" parent="Background/Area2DHome"]
+visible = false
+z_index = 2000
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 335.0
+offset_top = 153.0
+offset_right = 335.0
+offset_bottom = 153.0
+theme = ExtResource("29_juw5u")
+
+[node name="Panel" type="Panel" parent="Background/Area2DHome/Dialog"]
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 313.0
+theme_type_variation = &"PanelDialogBG"
+
+[node name="PVZButton" type="BaseButton" parent="Background/Area2DHome/Dialog"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 40)
+layout_direction = 0
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 75.0
+offset_top = 233.0
+offset_right = 235.0
+offset_bottom = 273.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("17_ua7i5")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="Background/Area2DHome/Dialog/PVZButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="Background/Area2DHome/Dialog/PVZButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "返回"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Background/Area2DHome/Dialog"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 129.0
+offset_right = 187.0
+offset_bottom = 152.0
+text = "戴夫 接客"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Area2DHome"]
+position = Vector2(11, 292)
+shape = SubResource("RectangleShape2D_yy6tc")
+
+[node name="TemporaryPlants" type="Node2D" parent="."]
+z_index = 900
+
+[node name="TemporaryZombies" type="Node2D" parent="."]
+z_index = 400
+
+[node name="Zombies" type="Node2D" parent="."]
+z_index = 400
+
+[node name="Zombies_row1" type="Node2D" parent="Zombies"]
+z_index = 1
+position = Vector2(850, 125)
+
+[node name="Zombies_row2" type="Node2D" parent="Zombies"]
+z_index = 2
+position = Vector2(850, 225)
+
+[node name="Zombies_row3" type="Node2D" parent="Zombies"]
+z_index = 3
+position = Vector2(850, 325)
+
+[node name="Zombies_row4" type="Node2D" parent="Zombies"]
+z_index = 4
+position = Vector2(850, 425)
+
+[node name="Zombies_row5" type="Node2D" parent="Zombies"]
+z_index = 5
+position = Vector2(850, 525)
+
+[node name="ShowZombie" type="Node2D" parent="."]
+z_index = 400
+y_sort_enabled = true
+position = Vector2(850, 80)
+
+[node name="Bullets" type="Node2D" parent="."]
+z_index = 600
+
+[node name="Bombs" type="Node2D" parent="."]
+z_index = 650
+
+[node name="天降阳光" parent="." instance=ExtResource("30_xabmm")]
+z_index = 800
+
+[node name="UIRemindWord" type="Control" parent="."]
+visible = false
+z_index = 1000
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 600.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("31_us51u")
+
+[node name="Ready" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -66.5
+offset_right = 150.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_7n0yf")
+
+[node name="Set" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -66.5
+offset_right = 150.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("33_tqmlo")
+
+[node name="Plant" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -66.5
+offset_right = 150.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("34_xrwm3")
+
+[node name="Approaching" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -40.0
+offset_right = 246.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_rx5kb")
+
+[node name="FinalWave" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.5
+offset_top = -40.0
+offset_right = 170.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("36_jayta")
+
+[node name="ZombiesWon" type="TextureRect" parent="UIRemindWord"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -234.0
+offset_right = 282.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("37_nm8tm")
+
+[node name="CanvasLayer_FX" type="CanvasLayer" parent="."]
+
+[node name="Panel_Ice" type="Panel" parent="CanvasLayer_FX"]
+modulate = Color(0, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ybhi1")
+script = ExtResource("38_tixov")
+
+[node name="Panel_Doom" type="Panel" parent="CanvasLayer_FX"]
+modulate = Color(0.619608, 0, 0.623529, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ybhi1")
+script = ExtResource("38_tixov")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="All_UI" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("29_juw5u")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainGameMenuButton" type="BaseButton" parent="CanvasLayer/All_UI"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 694.0
+offset_top = 0.0
+offset_right = 798.0
+offset_bottom = 38.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("39_7ybbt")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/All_UI/MainGameMenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainGameMenuOptionDialog" type="TextureRect" parent="CanvasLayer/All_UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -241.5
+offset_right = 206.0
+offset_bottom = 241.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("40_lc8d4")
+script = ExtResource("41_b6mtt")
+
+[node name="Option" type="Control" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog"]
+anchors_preset = 0
+offset_left = 102.0
+offset_top = 115.0
+offset_right = 320.0
+offset_bottom = 373.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 10
+
+[node name="Music" type="Control" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer"]
+custom_minimum_size = Vector2(220, 30)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/Music"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_type_variation = &"MenuLabel"
+text = "音乐"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/Music"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1.0
+offset_right = 212.0
+offset_bottom = 31.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="SoundEffect" type="Control" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer"]
+custom_minimum_size = Vector2(220, 30)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/SoundEffect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_type_variation = &"MenuLabel"
+text = "音效"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/SoundEffect"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 1.0
+offset_right = 212.0
+offset_bottom = 30.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="TimeScale" type="Control" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer"]
+custom_minimum_size = Vector2(220, 30)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/TimeScale"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_type_variation = &"MenuLabel"
+text = "倍速 1.0 倍"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/VBoxContainer/TimeScale"]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 1.0
+offset_right = 212.0
+offset_bottom = 30.0
+min_value = 0.5
+max_value = 2.0
+step = 0.5
+value = 1.0
+
+[node name="Button1" type="BaseButton" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 3
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 6.0
+offset_top = 123.5
+offset_right = 94.0
+offset_bottom = 160.5
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("17_ua7i5")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "查看图鉴"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="BaseButton" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 3
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 113.0
+offset_top = 124.0
+offset_right = 201.0
+offset_bottom = 161.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("17_ua7i5")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "选项设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="控制台" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button4" instance=ExtResource("42_xhgkl")]
+visible = false
+script = ExtResource("43_w741w")
+
+[node name="Button2" type="BaseButton" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 3
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 5.0
+offset_top = 167.0
+offset_right = 200.0
+offset_bottom = 204.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("17_ua7i5")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "重新开始"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="BaseButton" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 3
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 5.0
+offset_top = 211.0
+offset_right = 200.0
+offset_bottom = 248.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("17_ua7i5")
+metadata/_custom_type_script = "uid://parybxg7tb1k"
+
+[node name="Panel" type="Panel" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelButtonBG"
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "主菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return" type="TextureButton" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -179.0
+offset_top = -102.5
+offset_right = 181.0
+offset_bottom = -2.5
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("43_nerx8")
+texture_pressed = ExtResource("43_nerx8")
+texture_click_mask = ExtResource("44_ncqxd")
+script = ExtResource("17_ua7i5")
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/MainGameMenuOptionDialog/Return"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 13.0
+offset_right = 279.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
+text = "返回游戏"
+
+[node name="Dialog" parent="CanvasLayer/All_UI" instance=ExtResource("45_2k8iw")]
+visible = false
+layout_mode = 1
+offset_left = 242.0
+offset_top = 162.0
+offset_right = 242.0
+offset_bottom = 162.0
+
+[node name="Label" type="Label" parent="CanvasLayer/All_UI/Dialog"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 132.0
+offset_right = 169.0
+offset_bottom = 155.0
+text = "没做"
+
+[node name="资源管理" type="Node2D" parent="."]
+position = Vector2(1, 572)
+script = ExtResource("46_mver3")
+
+[node name="货币栏" type="Sprite2D" parent="资源管理"]
+position = Vector2(66, 6)
+texture = ExtResource("47_5630y")
+region_enabled = true
+region_rect = Rect2(136, 0, 132, 43)
+
+[node name="金币文本" type="Label" parent="资源管理/货币栏"]
+offset_left = -25.0
+offset_top = -8.0
+offset_right = 60.0
+offset_bottom = 20.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "999990"
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/CardManager/CardBarAndShovel/CardBarBg" to="Camera2D/CardManager/CardBarAndShovel/CardBarBg" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_mouse_exited"]
+[connection signal="pressed" from="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg/Button" to="Camera2D/CardManager/CardBarAndShovel/MarginContainer/ShovelBg" method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/CardManager/CardChooser/TextureRect/TextureButton" to="." method="cheeosed_card_start_game"]
+[connection signal="timeout" from="Manager/ZombieManager/WaveTimer" to="Manager/ZombieManager" method="_on_WaveTimer_timeout"]
+[connection signal="timeout" from="Manager/ZombieManager/OneWaveProgressTimer" to="Manager/ZombieManager" method="_on_one_wave_progress_timer_timeout"]
+[connection signal="area_entered" from="Background/Area2DHome" to="Background/Area2DHome" method="_on_area_entered"]
+[connection signal="pressed" from="Background/Area2DHome/Dialog/PVZButton" to="Background/Area2DHome" method="resume_game"]
+[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuButton" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="appear_menu"]
+[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button1" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="encyclopedia"]
+[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button2" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="resume_game"]
+[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button3" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_main_menu"]
+[connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Return" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_button_pressed"]

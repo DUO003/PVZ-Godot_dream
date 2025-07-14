@@ -1,6 +1,6 @@
 extends Node
 class_name 放置版管理
-
+#region 存档管理
 # 存档路径
 const 存档地址 = "user://放置版存档.json"
 
@@ -33,8 +33,10 @@ var 放置版存档 = {
 	},
 	"存档版本":1.0
 }
+#endregion
 
 #region 物品管理
+
 # 物品系统单例 - 管理所有物品信息和操作
 
 # 物品类型枚举
@@ -51,6 +53,7 @@ var 物品贴图路径: String
 var 物品缩放比例: float = 1.0
 var 物品的类型: int
 var 物品参数: Dictionary
+var 物品简介: String
 
 # 所有物品的注册表
 var 物品注册表 = {}
@@ -64,13 +67,14 @@ var 物品注册表 = {}
 	#注册物品("经验药水", "res://assets/icons/exp_potion.png", 物品类型.消耗品, {"经验值": 500})
 
 # 注册新物品
-func 注册新物品(名称: String, 贴图路径: String, 类型: int, 参数: Dictionary, 缩放比例: float = 1.0):
+func 注册新物品(名称: String, 贴图路径: String, 类型: int, 参数: Dictionary, 简介: String = "暂无简介", 缩放比例: float = 1.0):
 	var 新物品 = 放置版管理.new()
 	新物品.物品名称 = 名称
 	新物品.物品贴图路径 = 贴图路径
 	新物品.物品缩放比例 = 缩放比例
 	新物品.物品的类型 = 类型
 	新物品.物品参数 = 参数
+	新物品.物品简介 = 简介
 	
 	物品注册表[名称] = 新物品
 	print("已注册物品: ", 名称)
@@ -96,11 +100,36 @@ func 加载物品贴图(名称: String) -> Texture2D:
 	if 物品:
 		return load(物品.物品贴图路径)
 	return null
+	
+func 加载物品简介(名称: String) -> Texture2D:
+	var 物品 = 获取物品注册信息(名称)
+	if 物品:
+		return load(物品.物品简介)
+	return null
+#endregion
+
+#region 关卡管理
+
+var 选中关卡 = 关卡列表.前院告急1_1
+
+enum 关卡列表{
+	测试,
+	前院告急1_1,
+	}
+var 关卡名称映射 = {
+	关卡列表.测试: "测试",
+	关卡列表.前院告急1_1: "前院告急1_1"
+}
+func 获取当前关卡名称() -> String:
+	return 关卡名称映射.get(选中关卡, "未知关卡")
+var 关卡权重 = {
+}
+
 #endregion
 # 初始化存档系统
 func _ready():
 	加载存档()
-	注册新物品("金币", "res://assets/ZJ/reanim/coin_gold_dollar.png", 物品类型.货币, {"价值": 1})
+	注册新物品("金币", "res://assets/ZJ/reanim/coin_gold_dollar.png", 物品类型.货币, {"价值": 1},"价值")
 	注册新物品("豌豆", "res://assets/ZJ/images/ProjectilePea.png", 物品类型.精通道具, {"精通值": 100,"突破率":0.15})
 	注册新物品("寒冰豌豆", "res://assets/ZJ/images/ProjectileSnowPea.png", 物品类型.精通道具, {"精通值": 125,"突破率":0.15})
 	注册新物品("图鉴", "res://assets/ZJ/images/Almanac.png", 物品类型.任务物品, {})

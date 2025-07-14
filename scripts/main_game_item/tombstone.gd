@@ -10,7 +10,7 @@ class_name  TombStone
 @onready var dirt: DirtNewZombie = $Dirt
 
 @export var zombie_candidate_list :Array[Global.ZombieType]
-@export var zombie_manager:ZombieManager
+@export var zombie_manager:Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

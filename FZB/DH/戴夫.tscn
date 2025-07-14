@@ -1,0 +1,164 @@
+[gd_scene load_steps=25 format=3 uid="uid://chqb7wtpmnspb"]
+
+[ext_resource type="Script" uid="uid://cq5u7thnwrmxf" path="res://FZB/DH/戴夫.gd" id="1_1bx7t"]
+[ext_resource type="Texture2D" uid="uid://cc31mlx7ye5ka" path="res://assets/reanim/CrazyDave_innerpants.png" id="1_vls28"]
+[ext_resource type="Texture2D" uid="uid://be3h44molspx4" path="res://assets/reanim/CrazyDave_foot2.png" id="2_1bx7t"]
+[ext_resource type="Texture2D" uid="uid://cxkinao3ajl6e" path="res://assets/reanim/CrazyDave_foot1.png" id="3_v7t5c"]
+[ext_resource type="Texture2D" uid="uid://cthqsdcr8t6ea" path="res://assets/reanim/CrazyDave_body2.png" id="4_lv18y"]
+[ext_resource type="Texture2D" uid="uid://c53i58kfrl2e5" path="res://assets/放置版/CrazyDave_body1 - 副本.png" id="5_nbcy8"]
+[ext_resource type="Texture2D" uid="uid://bfd71nj7k6hn5" path="res://assets/reanim/CrazyDave_head.png" id="6_lxtf1"]
+[ext_resource type="Texture2D" uid="uid://bmqyq85tfandw" path="res://assets/reanim/CrazyDave_beard.png" id="7_6pxtk"]
+[ext_resource type="Texture2D" uid="uid://b4pyxjeuayv4o" path="res://assets/reanim/CrazyDave_mouth6.png" id="8_gvegg"]
+[ext_resource type="Texture2D" uid="uid://cmtcyg2c3ttt3" path="res://assets/reanim/CrazyDave_eye.png" id="9_77ur2"]
+[ext_resource type="Texture2D" uid="uid://wnskai2dy0p" path="res://assets/reanim/CrazyDave_eyebrow.png" id="10_52jfp"]
+[ext_resource type="Texture2D" uid="uid://cmo4xtkq00bl6" path="res://assets/reanim/CrazyDave_pot.png" id="11_kl2p2"]
+[ext_resource type="Texture2D" uid="uid://fcryqcidgsnj" path="res://assets/reanim/CrazyDave_innerarm.png" id="12_a34jk"]
+[ext_resource type="Texture2D" uid="uid://dit5hsfm7xm5h" path="res://assets/reanim/CrazyDave_innerhand.png" id="13_77o6f"]
+[ext_resource type="Texture2D" uid="uid://l8ka45nwofx3" path="res://assets/reanim/CrazyDave_innerfinger1.png" id="14_h1ghj"]
+[ext_resource type="Texture2D" uid="uid://ddd5fxvmdxy0i" path="res://assets/reanim/CrazyDave_innerfinger2.png" id="15_ourei"]
+[ext_resource type="Texture2D" uid="uid://b5vomf2s5naj4" path="res://assets/reanim/CrazyDave_innerfinger3.png" id="16_g18cf"]
+[ext_resource type="Texture2D" uid="uid://cip6pjcs825le" path="res://assets/reanim/CrazyDave_innerfinger4.png" id="17_s24gk"]
+[ext_resource type="Texture2D" uid="uid://cxgwo5wvbdcpo" path="res://assets/reanim/CrazyDave_outerarm.png" id="18_rfbwv"]
+[ext_resource type="Texture2D" uid="uid://c4i3pgitwuu4h" path="res://assets/reanim/CrazyDave_outerhand.png" id="19_38fot"]
+[ext_resource type="Texture2D" uid="uid://b6nm3i5upos7m" path="res://assets/reanim/CrazyDave_outerfinger1.png" id="20_1our7"]
+[ext_resource type="Texture2D" uid="uid://isv3mlg8a6c6" path="res://assets/reanim/CrazyDave_outerfinger2.png" id="21_fb3df"]
+[ext_resource type="Texture2D" uid="uid://cpxbvkcpmudhn" path="res://assets/reanim/CrazyDave_outerfinger3.png" id="22_ctnrb"]
+[ext_resource type="Texture2D" uid="uid://bnxwfg1i61uui" path="res://assets/reanim/CrazyDave_outerfinger4.png" id="23_4d5vl"]
+
+[node name="疯狂戴夫" type="Node2D"]
+script = ExtResource("1_1bx7t")
+
+[node name="戴夫正常节点" type="Node2D" parent="."]
+position = Vector2(-188, -40)
+
+[node name="Dave_innerpants" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(29.7, 474.315)
+texture = ExtResource("1_vls28")
+centered = false
+
+[node name="Dave_foot2" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(146.2, 447.815)
+texture = ExtResource("2_1bx7t")
+centered = false
+
+[node name="Dave_foot1" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(20.4, 451.215)
+texture = ExtResource("3_v7t5c")
+centered = false
+
+[node name="Dave_body2" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(30.3, 141.715)
+texture = ExtResource("4_lv18y")
+centered = false
+
+[node name="Dave_body1" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(-4, -140.585)
+centered = false
+
+[node name="戴夫身体" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(169.9, 65.8146)
+texture = ExtResource("5_nbcy8")
+
+[node name="Dave_head" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(64.1, -248.885)
+texture = ExtResource("6_lxtf1")
+centered = false
+
+[node name="Dave_beard" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(130.8, -152.585)
+texture = ExtResource("7_6pxtk")
+centered = false
+
+[node name="Dave_mouths" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(158.9, -146.285)
+texture = ExtResource("8_gvegg")
+centered = false
+
+[node name="Dave_eye" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(193.8, -190.785)
+rotation = 6.23955
+texture = ExtResource("9_77ur2")
+centered = false
+
+[node name="Dave_eyebrow" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(195.7, -203.885)
+rotation = 6.23955
+texture = ExtResource("10_52jfp")
+centered = false
+
+[node name="Dave_pot" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(55.8, -260.185)
+rotation = 6.23955
+scale = Vector2(1.033, 1)
+texture = ExtResource("11_kl2p2")
+centered = false
+
+[node name="Dave_innerarm" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(272, 55.4146)
+texture = ExtResource("12_a34jk")
+centered = false
+
+[node name="Dave_innerhand" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(232.7, 77.9146)
+scale = Vector2(0.924, 0.924)
+texture = ExtResource("13_77o6f")
+centered = false
+
+[node name="Dave_innerfinger1" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(208.3, 78.7146)
+scale = Vector2(0.924, 0.924)
+texture = ExtResource("14_h1ghj")
+centered = false
+
+[node name="Dave_innerfinger2" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(222.4, 100.115)
+scale = Vector2(0.924, 0.924)
+texture = ExtResource("15_ourei")
+centered = false
+
+[node name="Dave_innerfinger3" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(238.2, 112.715)
+scale = Vector2(0.924, 0.924)
+texture = ExtResource("16_g18cf")
+centered = false
+
+[node name="Dave_innerfinger4" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(257.8, 123.715)
+scale = Vector2(0.924, 0.924)
+texture = ExtResource("17_s24gk")
+centered = false
+
+[node name="Dave_outerarm" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(52.7, 74.9146)
+texture = ExtResource("18_rfbwv")
+centered = false
+
+[node name="Dave_outerhand" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(126.7, 29.0146)
+scale = Vector2(1.087, 1.087)
+texture = ExtResource("19_38fot")
+centered = false
+
+[node name="Dave_outerfinger1" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(130.6, 2.01459)
+scale = Vector2(1.087, 1.087)
+texture = ExtResource("20_1our7")
+centered = false
+
+[node name="Dave_outerfinger2" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(152.1, 26.2146)
+scale = Vector2(1.087, 1.087)
+texture = ExtResource("21_fb3df")
+centered = false
+
+[node name="Dave_outerfinger3" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(160.3, 41.7146)
+scale = Vector2(1.087, 1.087)
+texture = ExtResource("22_ctnrb")
+centered = false
+
+[node name="Dave_outerfinger4" type="Sprite2D" parent="戴夫正常节点"]
+position = Vector2(171.4, 62.5146)
+scale = Vector2(1.087, 1.087)
+texture = ExtResource("23_4d5vl")
+centered = false
