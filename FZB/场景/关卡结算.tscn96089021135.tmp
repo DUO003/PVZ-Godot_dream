@@ -1,0 +1,191 @@
+[gd_scene load_steps=8 format=3 uid="uid://bespnhoda4fod"]
+
+[ext_resource type="Script" uid="uid://bsgb47aakuupy" path="res://FZB/场景/关卡结算.gd" id="1_a42e6"]
+[ext_resource type="Texture2D" uid="uid://0rrh3pot77ju" path="res://assets/ZJ/images/AwardScreen_Back.jpg" id="1_qjwsh"]
+[ext_resource type="Texture2D" uid="uid://lsgjasl7whn4" path="res://assets/ZJ/new/PropAlmanac_Equipment_button.png" id="2_a42e6"]
+[ext_resource type="Texture2D" uid="uid://dkhlemmljo2ac" path="res://assets/ZJ/new/PropAlmanac_Equipment_button2.png" id="3_tv1dr"]
+[ext_resource type="Texture2D" uid="uid://cxjx548cqs6cr" path="res://assets/ZJ/images/SeedPacket_Larger.png" id="5_1lbo0"]
+[ext_resource type="Texture2D" uid="uid://cmgnpmkdx2a7p" path="res://assets/ZJ/images/SeedChooser_Button2.png" id="6_x3gl0"]
+[ext_resource type="Texture2D" uid="uid://cog0f3ojo3kq7" path="res://assets/ZJ/images/SeedChooser_Button2_Glow.png" id="7_in6eq"]
+
+[node name="关卡结算" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a42e6")
+
+[node name="背景" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qjwsh")
+
+[node name="我知道了" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 520.0
+offset_right = 554.0
+offset_bottom = 561.0
+scale = Vector2(1.61264, 1.33138)
+texture_normal = ExtResource("2_a42e6")
+texture_pressed = ExtResource("2_a42e6")
+texture_hover = ExtResource("3_tv1dr")
+
+[node name="文本" type="Label" parent="我知道了"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -11.5
+offset_right = 32.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "我知道了"
+
+[node name="植物" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="植物名称" type="Label" parent="植物"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 482.0
+offset_top = 289.0
+offset_right = 546.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "带妹上分射手"
+
+[node name="植物简介" type="Label" parent="植物"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 375.0
+offset_top = 330.0
+offset_right = 660.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "这里应该填写植物简介"
+autowrap_mode = 1
+
+[node name="植物场景" type="Control" parent="植物"]
+anchors_preset = 0
+offset_left = 540.0
+offset_top = 210.0
+offset_right = 540.0
+offset_bottom = 210.0
+scale = Vector2(1.5, 1.5)
+
+[node name="碎片容器" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 100.0
+offset_right = 91.0
+offset_bottom = 140.0
+
+[node name="植物卡" type="TextureButton" parent="碎片容器"]
+layout_mode = 2
+texture_normal = ExtResource("5_1lbo0")
+texture_pressed = ExtResource("5_1lbo0")
+texture_hover = ExtResource("5_1lbo0")
+texture_disabled = ExtResource("5_1lbo0")
+texture_focused = ExtResource("5_1lbo0")
+
+[node name="植物场景" type="Control" parent="碎片容器/植物卡"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 62.0
+offset_right = 47.0
+offset_bottom = 62.0
+
+[node name="按钮" type="TextureButton" parent="碎片容器/植物卡"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 114.0
+offset_right = 349.0
+offset_bottom = 140.0
+scale = Vector2(0.6, 1)
+texture_normal = ExtResource("6_x3gl0")
+texture_pressed = ExtResource("7_in6eq")
+texture_hover = ExtResource("6_x3gl0")
+texture_disabled = ExtResource("6_x3gl0")
+texture_focused = ExtResource("6_x3gl0")
+
+[node name="按钮文本" type="Label" parent="碎片容器/植物卡/按钮"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.1667
+offset_top = -11.0
+offset_right = 12.8333
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.667, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "解锁"
+
+[node name="植物属性" type="Control" parent="碎片容器/植物卡"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="植物名称" type="Label" parent="碎片容器/植物卡/植物属性"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 93.0
+offset_top = 94.0
+offset_right = 189.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "带妹上分射手"
+
+[node name="碎片数量" type="Label" parent="碎片容器/植物卡/植物属性"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = 64.0
+offset_right = 214.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "植物碎片：12/10"
+clip_text = true

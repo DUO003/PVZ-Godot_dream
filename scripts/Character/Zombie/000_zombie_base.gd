@@ -119,8 +119,9 @@ var be_hypnotized_color_res := Color(1, 0.5, 1)
 
 #endregion
 
-
+@export var 掉落物节点:掉落物管理
 func _ready() -> void:
+	掉落物节点 = get_tree().root.get_node("MainGame/掉落物管理")
 	super._ready()
 	walking_status = WalkingStatus.start
 	#_previous_ground_global_x = _ground.position.x
@@ -469,6 +470,7 @@ func _hand_fade():
 ## 第一次血量3阶段变化 掉头状态
 func _hp_3_stage():
 	_head_fade()
+	掉落金币()
 	
 # 头消失，
 func _head_fade():
@@ -478,6 +480,19 @@ func _head_fade():
 		head_part.visible = false
 		
 	head_drop.acitvate_it()
+	
+#独立的金币掉落方法
+
+func 掉落金币():
+	# 50%概率掉落金币
+	if randf() < 1:
+	# 加载并实例化金币场景
+		var 金币场景 = preload("res://FZB/场景/场景内道具/金币.tscn").instantiate()
+		掉落物节点.add_child(金币场景)
+		金币场景.global_position = global_position
+		print("金币生成")
+
+
 #endregion
 #endregion
 

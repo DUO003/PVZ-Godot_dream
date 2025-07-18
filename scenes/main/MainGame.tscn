@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://b2soejmoqi7wd"]
+[gd_scene load_steps=53 format=3 uid="uid://b2soejmoqi7wd"]
 
 [ext_resource type="Script" uid="uid://c7dr2016dfdoo" path="res://scripts/manager/main_game_manager.gd" id="1_7dde3"]
 [ext_resource type="AudioStream" uid="uid://duvijencyf7mi" path="res://assets/audio/BGM/choose_card.mp3" id="2_8fvtd"]
@@ -47,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://5v0fdtao52jl" path="res://scenes/main/control_canvas_layer.tscn" id="34_ifnc6"]
 [ext_resource type="Script" uid="uid://d2g7qgdt0ej3k" path="res://FZB/货币栏.gd" id="46_b4qea"]
 [ext_resource type="Texture2D" uid="uid://cje7xdhcyt1cu" path="res://assets/ZJ/images/coin金币栏.png" id="46_vyo3a"]
+[ext_resource type="Script" uid="uid://dxjv5rsyoo1qg" path="res://scenes/main/掉落物管理.gd" id="46_xaurn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x628s"]
 texture = ExtResource("8_xvvqk")
@@ -822,6 +823,7 @@ offset_bottom = 575.0
 [node name="LabelZombieSum" type="Label" parent="Manager/ZombieManager/FlagProgressBar"]
 z_index = 1000
 z_as_relative = false
+layout_mode = 0
 offset_left = 2.0
 offset_top = -24.0
 offset_right = 161.0
@@ -1800,8 +1802,22 @@ offset_right = 169.0
 offset_bottom = 155.0
 text = "没做"
 
-[node name="资源管理" type="Node2D" parent="."]
-position = Vector2(1, 572)
+[node name="掉落物管理" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 572.0
+offset_right = 41.0
+offset_bottom = 612.0
+script = ExtResource("46_xaurn")
+
+[node name="资源管理" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 572.0
+offset_right = 1.0
+offset_bottom = 572.0
 script = ExtResource("46_b4qea")
 
 [node name="货币栏" type="Sprite2D" parent="资源管理"]
@@ -1816,12 +1832,14 @@ offset_top = -8.0
 offset_right = 60.0
 offset_bottom = 20.0
 size_flags_horizontal = 0
+mouse_filter = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "999990"
 vertical_alignment = 1
 
 [node name="关卡名称" type="Label" parent="资源管理"]
+layout_mode = 0
 offset_left = 781.0
 offset_right = 901.0
 offset_bottom = 28.0
@@ -1848,3 +1866,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button2" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="resume_game"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Option/Button3" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_main_menu"]
 [connection signal="pressed" from="CanvasLayer/All_UI/MainGameMenuOptionDialog/Return" to="CanvasLayer/All_UI/MainGameMenuOptionDialog" method="return_button_pressed"]
+[connection signal="mouse_entered" from="资源管理/货币栏/金币文本" to="资源管理" method="_切换显示全局金币"]
+[connection signal="mouse_exited" from="资源管理/货币栏/金币文本" to="资源管理" method="_切换显示当前金币"]

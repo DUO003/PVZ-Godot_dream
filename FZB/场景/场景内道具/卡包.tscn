@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdi2ahi4v0e6f"]
+
+[ext_resource type="Script" uid="uid://8vx3i4py7srn" path="res://FZB/场景/场景内道具/卡包.gd" id="1_gw8ro"]
+[ext_resource type="Texture2D" uid="uid://ck3qd7qu37g43" path="res://assets/image/ui/ui_trophy/AwardPickupGlow.png" id="2_25jfl"]
+[ext_resource type="Texture2D" uid="uid://dutnf2k8nkqlf" path="res://assets/image/ui/ui_trophy/AwardRays1.png" id="3_egyns"]
+[ext_resource type="Texture2D" uid="uid://cev77yt3o6wn5" path="res://assets/image/ui/ui_trophy/AwardRays2.png" id="4_7aja4"]
+[ext_resource type="Texture2D" uid="uid://yk66wnfu0ye8" path="res://assets/image/ui/ui_trophy/AwardRays.png" id="5_v6bat"]
+[ext_resource type="Texture2D" uid="uid://c8kyjcgv2a6vr" path="res://assets/image/ui/ui_trophy/AwardRays_star.png" id="6_s1wjq"]
+[ext_resource type="Texture2D" uid="uid://c6r2boch3cc2m" path="res://assets/ZJ/new/Card_Switch1.png" id="7_jifyx"]
+[ext_resource type="Texture2D" uid="uid://dsx7x222200ae" path="res://assets/image/ui/ui_trophy/AwardGlow.png" id="9_ncxgr"]
+
+[node name="Trophy" type="Node2D"]
+z_index = 2000
+z_as_relative = false
+script = ExtResource("1_gw8ro")
+
+[node name="PickUpGlow" type="Sprite2D" parent="."]
+texture = ExtResource("2_25jfl")
+
+[node name="AllRays" type="Node2D" parent="."]
+visible = false
+
+[node name="Rays1" type="Sprite2D" parent="AllRays"]
+rotation = -4.18879
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("3_egyns")
+
+[node name="Rays2" type="Sprite2D" parent="AllRays"]
+rotation = 0.785398
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("4_7aja4")
+
+[node name="Rays" type="Sprite2D" parent="AllRays"]
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("5_v6bat")
+
+[node name="Rays_star" type="Sprite2D" parent="AllRays"]
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("6_s1wjq")
+
+[node name="TrophyButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -33.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_jifyx")
+texture_pressed = ExtResource("7_jifyx")
+texture_hover = ExtResource("7_jifyx")
+texture_disabled = ExtResource("7_jifyx")
+
+[node name="Glow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(100, 100)
+texture = ExtResource("9_ncxgr")
+
+[connection signal="pressed" from="TrophyButton" to="." method="_on_trophy_button_pressed"]

@@ -15,6 +15,7 @@ extends Node
 #子弹： 600
 #爆炸： 650
 #阳光： 800
+#金币： 801
 #Ui2 : 900 鼠标移入UI时，在植物和僵尸下面
 #真实铲子 : 950
 #血量显示： 980
@@ -274,8 +275,8 @@ var GameBgTextureMap = {
 const CONGIF_PATH := "user://config.ini"
 
 ## 用户选项控制台
-var auto_collect_sun := false
-var auto_collect_coin := false
+var auto_collect_sun := true
+var auto_collect_coin := true
 var disappear_spare_card_Placeholder := false
 var display_plant_HP_label := false
 var display_zombie_HP_label := false
@@ -330,8 +331,8 @@ func load_config():
 const SAVE_GAME_PATH = "user://SaveGame.save"
 
 var curr_plant = [
-	PlantType.PeaShooterSingle,
-	PlantType.SunFlower, 
+	PlantType.PeaShooterSingle,#豌豆射手
+	PlantType.SunFlower, #向日葵
 	PlantType.CherryBomb,
 	PlantType.WallNut,
 	PlantType.PotatoMine,

@@ -105,6 +105,7 @@ var main_game_progress:MainGameProgress
 ## 夜晚初始生成的墓碑数量
 @export var init_tombstone_num := 0
 @export var 执行对话 = null
+@export var 植物碎片=[]
 
 #endregion
 
@@ -116,6 +117,7 @@ var main_game_progress:MainGameProgress
 func 初始化关卡():
 	max_choosed_card_num=7#初始卡槽
 	if 全局放置.选中关卡 == 1:
+		全局放置.关卡奖励卡池 = ["豌豆射手", "带妹上分射手"]
 		执行对话="res://FZB/对话/前院告急1-1.dtl"
 		start_sun=400#初始阳光
 		max_wave=10# 波次
@@ -138,6 +140,7 @@ func 初始化关卡():
 		出怪权重调整 = {
 			Global.ZombieType.ZombieNorm: 4000, 
 			}
+		植物碎片=[]
 
 func 开始对话():
 	print("对话已开始")

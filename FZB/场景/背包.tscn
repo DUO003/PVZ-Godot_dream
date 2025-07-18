@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xa4yrkis3jqb"]
+[gd_scene load_steps=9 format=3 uid="uid://xa4yrkis3jqb"]
 
 [ext_resource type="Texture2D" uid="uid://dkdufu8065j0w" path="res://assets/ZJ/new/PropAlmanac_Background - 副本.png" id="1_4hgnq"]
 [ext_resource type="Script" uid="uid://gvdxfk8af7s8" path="res://FZB/场景/背包.gd" id="1_5tqg8"]
@@ -7,27 +7,31 @@
 [ext_resource type="Texture2D" uid="uid://c82uuprowr5d" path="res://assets/image/ui/ui_level/Almanac_CloseButtonHighlight.png" id="6_23v16"]
 [ext_resource type="Texture2D" uid="uid://bny3tfhgva8oo" path="res://assets/放置版/背包格子.png" id="7_5tqg8"]
 [ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="7_7funs"]
+[ext_resource type="Script" uid="uid://ch7ra1pth5byq" path="res://FZB/场景/物品栏.gd" id="8_r3epc"]
 
 [node name="背包" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_5tqg8")
 
 [node name="背景" type="Sprite2D" parent="."]
-scale = Vector2(0.74, 1)
 texture = ExtResource("1_4hgnq")
 offset = Vector2(540, 300)
 
 [node name="物品贴图" type="Sprite2D" parent="."]
-position = Vector2(657, 184)
+position = Vector2(891, 184)
 texture = ExtResource("2_82ue3")
 
 [node name="文本描述" type="Label" parent="."]
 layout_mode = 0
-offset_left = 565.0
+offset_left = 756.0
 offset_top = 320.0
-offset_right = 605.0
-offset_bottom = 343.0
+offset_right = 1019.0
+offset_bottom = 544.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -5
 theme_override_font_sizes/font_size = 18
@@ -35,12 +39,13 @@ text = "测试文本
 测试文本
 测试文本
 测试文本"
+autowrap_mode = 1
 
 [node name="物品名称" type="Label" parent="."]
 layout_mode = 0
-offset_left = 620.0
+offset_left = 853.0
 offset_top = 275.0
-offset_right = 692.0
+offset_right = 925.0
 offset_bottom = 301.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -5
@@ -50,44 +55,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="界面名称" type="Label" parent="."]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 26.0
-offset_right = 440.0
-offset_bottom = 71.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 28.0
+offset_bottom = 73.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -5
 theme_override_font_sizes/font_size = 32
 text = "你的背包"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="主菜单" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 695.0
-offset_top = 567.0
-offset_right = 784.0
-offset_bottom = 593.0
-texture_normal = ExtResource("5_r3epc")
-texture_pressed = ExtResource("6_23v16")
-texture_click_mask = ExtResource("7_7funs")
-
-[node name="Label" type="Label" parent="主菜单"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -38.5
-offset_top = -10.0
-offset_right = 18.5
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 13
-text = "主菜单"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -96,7 +73,7 @@ clip_contents = true
 layout_mode = 0
 offset_left = 34.0
 offset_top = 106.0
-offset_right = 594.0
+offset_right = 810.0
 offset_bottom = 546.0
 scale = Vector2(0.85, 1)
 theme_override_constants/separation = 2
@@ -105,11 +82,16 @@ theme_override_constants/separation = 2
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="物品栏1" type="TextureRect" parent="背包格子/排1"]
+[node name="物品栏1" type="TextureButton" parent="背包格子/排1"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排1/物品栏1"]
 layout_mode = 1
@@ -160,11 +142,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏2" type="TextureRect" parent="背包格子/排1"]
+[node name="物品栏2" type="TextureButton" parent="背包格子/排1"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排1/物品栏2"]
 layout_mode = 1
@@ -215,11 +202,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏3" type="TextureRect" parent="背包格子/排1"]
+[node name="物品栏3" type="TextureButton" parent="背包格子/排1"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排1/物品栏3"]
 layout_mode = 1
@@ -270,11 +262,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏4" type="TextureRect" parent="背包格子/排1"]
+[node name="物品栏4" type="TextureButton" parent="背包格子/排1"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排1/物品栏4"]
 layout_mode = 1
@@ -325,11 +322,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏5" type="TextureRect" parent="背包格子/排1"]
+[node name="物品栏5" type="TextureButton" parent="背包格子/排1"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排1/物品栏5"]
 layout_mode = 1
@@ -384,11 +386,16 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="物品栏1" type="TextureRect" parent="背包格子/排2"]
+[node name="物品栏1" type="TextureButton" parent="背包格子/排2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排2/物品栏1"]
 layout_mode = 1
@@ -439,11 +446,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏2" type="TextureRect" parent="背包格子/排2"]
+[node name="物品栏2" type="TextureButton" parent="背包格子/排2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排2/物品栏2"]
 layout_mode = 1
@@ -494,11 +506,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏3" type="TextureRect" parent="背包格子/排2"]
+[node name="物品栏3" type="TextureButton" parent="背包格子/排2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排2/物品栏3"]
 layout_mode = 1
@@ -549,11 +566,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏4" type="TextureRect" parent="背包格子/排2"]
+[node name="物品栏4" type="TextureButton" parent="背包格子/排2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排2/物品栏4"]
 layout_mode = 1
@@ -604,11 +626,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏5" type="TextureRect" parent="背包格子/排2"]
+[node name="物品栏5" type="TextureButton" parent="背包格子/排2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排2/物品栏5"]
 layout_mode = 1
@@ -663,11 +690,16 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="物品栏1" type="TextureRect" parent="背包格子/排3"]
+[node name="物品栏1" type="TextureButton" parent="背包格子/排3"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排3/物品栏1"]
 layout_mode = 1
@@ -718,11 +750,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏2" type="TextureRect" parent="背包格子/排3"]
+[node name="物品栏2" type="TextureButton" parent="背包格子/排3"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排3/物品栏2"]
 layout_mode = 1
@@ -773,11 +810,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏3" type="TextureRect" parent="背包格子/排3"]
+[node name="物品栏3" type="TextureButton" parent="背包格子/排3"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排3/物品栏3"]
 layout_mode = 1
@@ -828,11 +870,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏4" type="TextureRect" parent="背包格子/排3"]
+[node name="物品栏4" type="TextureButton" parent="背包格子/排3"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排3/物品栏4"]
 layout_mode = 1
@@ -883,11 +930,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="物品栏5" type="TextureRect" parent="背包格子/排3"]
+[node name="物品栏5" type="TextureButton" parent="背包格子/排3"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
-texture = ExtResource("7_5tqg8")
+texture_normal = ExtResource("7_5tqg8")
+texture_pressed = ExtResource("7_5tqg8")
+texture_hover = ExtResource("7_5tqg8")
+texture_disabled = ExtResource("7_5tqg8")
+texture_focused = ExtResource("7_5tqg8")
+script = ExtResource("8_r3epc")
 
 [node name="物品图片" type="TextureRect" parent="背包格子/排3/物品栏5"]
 layout_mode = 1
@@ -938,4 +990,155 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="主菜单" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 567.0
+offset_right = 1062.0
+offset_bottom = 593.0
+texture_normal = ExtResource("5_r3epc")
+texture_pressed = ExtResource("6_23v16")
+texture_click_mask = ExtResource("7_7funs")
+
+[node name="Label" type="Label" parent="主菜单"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -10.0
+offset_right = 18.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "主菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页码" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 455.0
+offset_top = 564.0
+offset_right = 495.0
+offset_bottom = 604.0
+
+[node name="下一页" type="TextureButton" parent="页码"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.328704
+anchor_right = -0.328704
+offset_left = 172.148
+offset_top = 4.0
+offset_right = 261.148
+offset_bottom = 30.0
+texture_normal = ExtResource("5_r3epc")
+texture_pressed = ExtResource("6_23v16")
+texture_click_mask = ExtResource("7_7funs")
+
+[node name="Label" type="Label" parent="页码/下一页"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -10.0
+offset_right = 18.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "下一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="上一页" type="TextureButton" parent="页码"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.492593
+anchor_top = -0.00166667
+anchor_right = -0.492593
+anchor_bottom = -0.00166667
+offset_left = 1.7037
+offset_top = 3.06667
+offset_right = 90.7037
+offset_bottom = 29.0667
+texture_normal = ExtResource("5_r3epc")
+texture_pressed = ExtResource("6_23v16")
+texture_click_mask = ExtResource("7_7funs")
+
+[node name="Label" type="Label" parent="页码/上一页"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -10.0
+offset_right = 18.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "上一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="页码"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 65.0
+offset_top = -16.0
+offset_right = 122.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="背包格子/排1/物品栏1" to="背包格子/排1/物品栏1" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排1/物品栏1" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排1/物品栏2" to="背包格子/排1/物品栏2" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排1/物品栏2" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排1/物品栏3" to="背包格子/排1/物品栏3" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排1/物品栏3" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排1/物品栏4" to="背包格子/排1/物品栏4" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排1/物品栏4" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排1/物品栏5" to="背包格子/排1/物品栏5" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排1/物品栏5" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排2/物品栏1" to="背包格子/排2/物品栏1" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排2/物品栏1" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排2/物品栏2" to="背包格子/排2/物品栏2" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排2/物品栏2" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排2/物品栏3" to="背包格子/排2/物品栏3" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排2/物品栏3" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排2/物品栏4" to="背包格子/排2/物品栏4" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排2/物品栏4" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排2/物品栏5" to="背包格子/排2/物品栏5" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排2/物品栏5" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排3/物品栏1" to="背包格子/排3/物品栏1" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排3/物品栏1" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排3/物品栏2" to="背包格子/排3/物品栏2" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排3/物品栏2" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排3/物品栏3" to="背包格子/排3/物品栏3" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排3/物品栏3" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排3/物品栏4" to="背包格子/排3/物品栏4" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排3/物品栏4" to="." method="_物品点击"]
+[connection signal="pressed" from="背包格子/排3/物品栏5" to="背包格子/排3/物品栏5" method="_按钮按下"]
+[connection signal="物品点击" from="背包格子/排3/物品栏5" to="." method="_物品点击"]
 [connection signal="pressed" from="主菜单" to="." method="_on_主菜单"]

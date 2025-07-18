@@ -54,8 +54,8 @@ const IceEffectScenes:PackedScene =  preload("res://scenes/fx/ice_effect.tscn")
 # 创建出怪列表
 var spawn_list = []
 
-# 生成僵尸的波次，最大为100波
-@export var max_waves_spawn_list = 100
+# 生成僵尸的波次，最大为10000波
+@export var max_waves_spawn_list = 10000
 @export var max_zombies_per_wave = 50
 
 # 定义每个僵尸的战力值
@@ -96,7 +96,8 @@ var zombie_weights = {
 #endregion
 
 ## 奖杯
-const trophy_scenes = preload("res://scenes/ui/trophy.tscn")
+#const trophy_scenes = preload("res://scenes/ui/trophy.tscn")
+const trophy_scenes = preload("res://FZB/场景/场景内道具/卡包.tscn")
 
 #region 魅惑僵尸管理
 @export var zombie_list_be_hypno:Array[ZombieBase] = []
@@ -163,7 +164,7 @@ func create_spawn_list():
 		var remaining_slots = max_zombies_per_wave
 		
 		# 判断是否为大波
-		var is_big_wave = (wave_index + 1) % 10 == 0
+		var is_big_wave = (wave_index + 1) % 10 == 0 || (wave_index + 1) == 0
 		# 计算当前波的战力上限
 		var current_power_limit = calculate_wave_power_limit(wave_index + 1, is_big_wave)
 
@@ -292,7 +293,7 @@ func start_next_wave() -> void:
 		return
 	
 	## 黑夜旗帜波生成墓碑和僵尸
-	if current_wave % 10 == 9 and current_wave != 0:
+	if current_wave % 10 == 9 and current_wave != max_wave - 1:
 		print("当前为旗帜波刷新")
 		
 		if main_game.game_bg == Global.GameBg.FrontNight:

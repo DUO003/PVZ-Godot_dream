@@ -139,7 +139,6 @@ texture = ExtResource("16_5vtbe")
 position = Vector2(-2, 1)
 
 [node name="向日葵表情" type="Sprite2D" parent="Body/向日葵"]
-z_index = 1
 position = Vector2(22.9118, 30.2279)
 scale = Vector2(0.52, 0.52)
 texture = ExtResource("17_2n8n2")

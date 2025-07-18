@@ -22,6 +22,7 @@ var 运行次数 = 0
 #endregion
 @onready var 阳光计时器 = $"阳光生产"
 func _ready():
+	print("植物被加载")
 	super._ready()
 	#await get_tree().create_timer(1.0).timeout#暂停执行一秒
 	阳光计时器.wait_time = 阳光间隔
@@ -74,6 +75,13 @@ func spawn_sun():
 		new_sun.sun_value = 阳光产量
 		new_sun._sun_scale(阳光产量)
 		# 控制阳光下落
+		
+	# 获取场景树并检查
+		var tree = get_tree()
+		if not tree:
+			print("无法获取场景树，终止阳光动画")
+			return
+			
 		var tween = get_tree().create_tween()
 		new_sun.global_position = sun.global_position
 		
