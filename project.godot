@@ -34,7 +34,9 @@ directories/dch_directory={
 "疯狂戴夫": "res://FZB/对话/疯狂戴夫.dch"
 }
 directories/dtl_directory={
-"前院告急1-1": "res://FZB/对话/前院告急1-1.dtl"
+"前院告急1-1": "res://FZB/对话/前院告急1-1.dtl",
+"前院告急1-2": "res://FZB/对话/前院告急1-2.dtl",
+"前院告急1-3": "res://FZB/对话/前院告急1-3.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

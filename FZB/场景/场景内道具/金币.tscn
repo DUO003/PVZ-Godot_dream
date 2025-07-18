@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://h8fn1dc3x7dg"]
+[gd_scene load_steps=6 format=3 uid="uid://h8fn1dc3x7dg"]
 
 [ext_resource type="Script" uid="uid://to5g6stcg46q" path="res://FZB/场景/场景内道具/金币.gd" id="1_cx6kq"]
 [ext_resource type="Texture2D" uid="uid://r7igjh70qlgl" path="res://assets/ZJ/reanim/coin_silver_dollar.png" id="2_wfum7"]
 [ext_resource type="Texture2D" uid="uid://mnx1ucreld3g" path="res://assets/ZJ/reanim/coin_gold_dollar.png" id="3_2ejw0"]
 [ext_resource type="Texture2D" uid="uid://chwmxtl7cw5b" path="res://assets/reanim/Diamond.png" id="4_aqpmb"]
+[ext_resource type="AudioStream" uid="uid://drkkj17pe7aot" path="res://assets/ZJ/sounds/coin.ogg" id="5_wfum7"]
 
 [node name="金币" type="Node2D"]
 z_index = 801
@@ -45,6 +46,9 @@ texture_pressed = ExtResource("4_aqpmb")
 texture_hover = ExtResource("4_aqpmb")
 texture_disabled = ExtResource("4_aqpmb")
 texture_focused = ExtResource("4_aqpmb")
+
+[node name="Coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wfum7")
 
 [connection signal="pressed" from="1" to="." method="点击"]
 [connection signal="pressed" from="2" to="." method="点击"]

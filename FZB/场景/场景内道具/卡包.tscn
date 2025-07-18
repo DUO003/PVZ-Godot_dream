@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdi2ahi4v0e6f"]
+[gd_scene load_steps=10 format=3 uid="uid://cdi2ahi4v0e6f"]
 
 [ext_resource type="Script" uid="uid://8vx3i4py7srn" path="res://FZB/场景/场景内道具/卡包.gd" id="1_gw8ro"]
 [ext_resource type="Texture2D" uid="uid://ck3qd7qu37g43" path="res://assets/image/ui/ui_trophy/AwardPickupGlow.png" id="2_25jfl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://yk66wnfu0ye8" path="res://assets/image/ui/ui_trophy/AwardRays.png" id="5_v6bat"]
 [ext_resource type="Texture2D" uid="uid://c8kyjcgv2a6vr" path="res://assets/image/ui/ui_trophy/AwardRays_star.png" id="6_s1wjq"]
 [ext_resource type="Texture2D" uid="uid://c6r2boch3cc2m" path="res://assets/ZJ/new/Card_Switch1.png" id="7_jifyx"]
+[ext_resource type="AudioStream" uid="uid://dotxu521qewf" path="res://assets/ZJ/sounds/finalfanfare.ogg" id="9_gw8ro"]
 [ext_resource type="Texture2D" uid="uid://dsx7x222200ae" path="res://assets/image/ui/ui_trophy/AwardGlow.png" id="9_ncxgr"]
 
 [node name="Trophy" type="Node2D"]
@@ -60,5 +61,8 @@ visible = false
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(100, 100)
 texture = ExtResource("9_ncxgr")
+
+[node name="胜利" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_gw8ro")
 
 [connection signal="pressed" from="TrophyButton" to="." method="_on_trophy_button_pressed"]

@@ -105,7 +105,7 @@ var main_game_progress:MainGameProgress
 ## 夜晚初始生成的墓碑数量
 @export var init_tombstone_num := 0
 @export var 执行对话 = null
-@export var 植物碎片=[]
+@export var 评星规则 := ["无损推车","不使用铲子或手套","剩余100阳光"]
 
 #endregion
 
@@ -115,7 +115,12 @@ var main_game_progress:MainGameProgress
 @export var is_test := false
 
 func 初始化关卡():
+	
 	max_choosed_card_num=7#初始卡槽
+
+	全局放置.碎片奖励次数 = 0
+	全局放置.关卡金币奖励 = 0
+	
 	if 全局放置.选中关卡 == 1:
 		全局放置.关卡奖励卡池 = ["豌豆射手", "带妹上分射手"]
 		执行对话="res://FZB/对话/前院告急1-1.dtl"
@@ -123,8 +128,22 @@ func 初始化关卡():
 		max_wave=10# 波次
 		zombie_refresh_types= [
 			Global.ZombieType.ZombieNorm,       # 普通僵尸
+		]
+		旗帜列表 = ["红旗"]
+		旗帜前保护时间 = 3
+		旗帜后保护时间 = 2
+		出怪权重调整 = {
+			Global.ZombieType.ZombieNorm: 4000, 
+			}
+	elif 全局放置.选中关卡 == 2:
+		全局放置.关卡奖励卡池 = ["向日葵", "阳光土豆雷"]
+		执行对话="res://FZB/对话/前院告急1-2.dtl"
+		start_sun=400#初始阳光
+		max_wave=10# 波次
+		zombie_refresh_types= [
+			Global.ZombieType.ZombieNorm,       # 普通僵尸
 			#Global.ZombieType.ZombieFlag,       # 旗帜僵尸
-			#Global.ZombieType.ZombieCone,       # 路障僵尸
+			Global.ZombieType.ZombieCone,       # 路障僵尸
 			#Global.ZombieType.ZombiePoleVaulter, # 撑杆僵尸
 			#Global.ZombieType.ZombieBucket,      # 铁桶僵尸
 			#Global.ZombieType.ZombiePaper      # 读报僵尸
@@ -139,8 +158,33 @@ func 初始化关卡():
 		旗帜后保护时间 = 2
 		出怪权重调整 = {
 			Global.ZombieType.ZombieNorm: 4000, 
+			Global.ZombieType.ZombieCone: 2000, 
 			}
-		植物碎片=[]
+	elif 全局放置.选中关卡 == 3:
+		全局放置.关卡奖励卡池 = ["樱桃炸弹", "阳光炸弹"]
+		执行对话="res://FZB/对话/前院告急1-3.dtl"
+		start_sun=400#初始阳光
+		max_wave=20# 波次
+		zombie_refresh_types= [
+			Global.ZombieType.ZombieNorm,       # 普通僵尸
+			#Global.ZombieType.ZombieFlag,       # 旗帜僵尸
+			Global.ZombieType.ZombieCone,       # 路障僵尸
+			#Global.ZombieType.ZombiePoleVaulter, # 撑杆僵尸
+			#Global.ZombieType.ZombieBucket,      # 铁桶僵尸
+			#Global.ZombieType.ZombiePaper      # 读报僵尸
+			#Global.ZombieType.ZombieScreenDoor, # 铁门僵尸
+			#Global.ZombieType.ZombieFootball,   # 橄榄球僵尸
+			#Global.ZombieType.ZombieJackson,    # 跳舞僵尸
+			#Global.ZombieType.ZombieDancer,     # 伴舞僵尸
+			#Global.ZombieType.DuckytubeZombie,  # 潜水僵尸
+		]
+		旗帜列表 = ["红旗"]
+		旗帜前保护时间 = 3
+		旗帜后保护时间 = 2
+		出怪权重调整 = {
+			Global.ZombieType.ZombieNorm: 3000, 
+			Global.ZombieType.ZombieCone: 3000, 
+			}
 
 func 开始对话():
 	print("对话已开始")

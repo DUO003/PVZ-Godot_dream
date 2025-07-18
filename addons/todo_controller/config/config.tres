@@ -407,7 +407,8 @@ script_list_meta = {
 "res://scripts/ui/start_menu/start_menu_root.gd": [-1, -1],
 "res://scripts/ui/ui_main_game_menu/canvas_layer_control.gd": [-1, -1],
 "res://scripts/ui/ui_main_game_menu/main_game_menu_option_dialog.gd": [-1, -1],
-"res://scripts/util/image_combiner.gd": [-1, -1]
+"res://scripts/util/image_combiner.gd": [-1, -1],
+"res://图鉴中转.gd": [-1, -1]
 }
 script_list_sort_mode = 0
 line_number_show = true

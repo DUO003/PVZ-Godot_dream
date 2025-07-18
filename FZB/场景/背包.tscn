@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xa4yrkis3jqb"]
+[gd_scene load_steps=10 format=3 uid="uid://xa4yrkis3jqb"]
 
 [ext_resource type="Texture2D" uid="uid://dkdufu8065j0w" path="res://assets/ZJ/new/PropAlmanac_Background - 副本.png" id="1_4hgnq"]
 [ext_resource type="Script" uid="uid://gvdxfk8af7s8" path="res://FZB/场景/背包.gd" id="1_5tqg8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bny3tfhgva8oo" path="res://assets/放置版/背包格子.png" id="7_5tqg8"]
 [ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="7_7funs"]
 [ext_resource type="Script" uid="uid://ch7ra1pth5byq" path="res://FZB/场景/物品栏.gd" id="8_r3epc"]
+[ext_resource type="Texture2D" uid="uid://mnx1ucreld3g" path="res://assets/ZJ/reanim/coin_gold_dollar.png" id="9_23v16"]
 
 [node name="背包" type="Control"]
 layout_mode = 3
@@ -1110,6 +1111,36 @@ theme_override_font_sizes/font_size = 16
 text = "1/1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="金币管理" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 36.0
+offset_top = 568.0
+offset_right = 36.0
+offset_bottom = 568.0
+
+[node name="金币数量" type="Label" parent="金币管理"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 1.0
+offset_right = 108.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "金币：100"
+
+[node name="金币" type="TextureButton" parent="金币管理"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -5.0
+offset_right = 31.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("9_23v16")
+texture_pressed = ExtResource("9_23v16")
+texture_hover = ExtResource("9_23v16")
+texture_disabled = ExtResource("9_23v16")
+texture_focused = ExtResource("9_23v16")
 
 [connection signal="pressed" from="背包格子/排1/物品栏1" to="背包格子/排1/物品栏1" method="_按钮按下"]
 [connection signal="物品点击" from="背包格子/排1/物品栏1" to="." method="_物品点击"]

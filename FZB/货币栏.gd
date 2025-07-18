@@ -15,19 +15,19 @@ func _游戏开始() -> void:
 
 func 更新金币信息():
 	if 显示类型:
-		金币位置.text = str(全局放置.读取金币())
+		金币位置.text = str(全局放置.读取金币())+str("背包")
 	else:
 		金币位置.text = str(全局放置.关卡金币奖励)
 
 func _切换显示全局金币() -> void:
 	显示类型=true
 	更新金币信息()
-	print("切换显示全局金币")
+	#print("切换显示全局金币")
 	pass # Replace with function body.
 
 
 func _切换显示当前金币() -> void:
 	显示类型=false
 	更新金币信息()
-	print("切换显示当前金币")
+	#print("切换显示当前金币")
 	pass # Replace with function body.

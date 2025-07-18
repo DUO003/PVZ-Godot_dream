@@ -1,6 +1,8 @@
 extends Control
 class_name 提示
 
+
+
 	
 func appear_dialog():
 	await get_tree().create_timer(0.1).timeout

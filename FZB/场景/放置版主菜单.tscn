@@ -1534,8 +1534,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -730.0
-offset_top = -45.0
-offset_bottom = 515.0
+offset_top = -536.0
+offset_bottom = 24.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("12_liqp6")
@@ -2123,8 +2123,8 @@ offset_right = 174.0
 offset_bottom = 151.0
 text = "没做"
 
-[connection signal="pressed" from="BG_Right/主菜单/开始冒险" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="BG_Right/主菜单/开始冒险" to="." method="_on_开始冒险"]
+[connection signal="pressed" from="BG_Right/主菜单/开始冒险" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="BG_Right/主菜单/小游戏" to="Dialog" method="appear_dialog"]
 [connection signal="pressed" from="BG_Right/主菜单/解密" to="Dialog" method="appear_dialog"]
 [connection signal="pressed" from="BG_Right/主菜单/挑战" to="Dialog" method="appear_dialog"]
@@ -2132,7 +2132,7 @@ text = "没做"
 [connection signal="pressed" from="BG_Right/帮助菜单/TextureButton2" to="." method="_on_option_button_2_pressed"]
 [connection signal="pressed" from="BG_Right/帮助菜单/TextureButton3" to="." method="_on_退出游戏"]
 [connection signal="pressed" from="BG_Right/功能菜单/花园" to="Dialog" method="appear_dialog"]
-[connection signal="pressed" from="BG_Right/功能菜单/图鉴" to="Dialog" method="appear_dialog"]
+[connection signal="pressed" from="BG_Right/功能菜单/图鉴" to="." method="图鉴"]
 [connection signal="pressed" from="BG_Right/功能菜单/背包" to="." method="_on_背包"]
 [connection signal="pressed" from="BG_Right/功能菜单/商店" to="Dialog" method="appear_dialog"]
 [connection signal="pressed" from="WoodSign/TextureRect2" to="Dialog" method="appear_dialog"]

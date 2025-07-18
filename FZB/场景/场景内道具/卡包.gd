@@ -12,6 +12,8 @@ func _ready():
 
 
 func _on_trophy_button_pressed() -> void:
+	var 音效地址=$"胜利"
+	音效地址.play()
 	$TrophyButton.disabled = true
 	var center = get_viewport().get_visible_rect().size / 2
 	var tween = create_tween()

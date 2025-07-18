@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bro30w1tvwrn6"]
+[gd_scene load_steps=17 format=3 uid="uid://bro30w1tvwrn6"]
 
 [ext_resource type="Script" uid="uid://y4tdyjnxa143" path="res://FZB/场景/主线关卡选择.gd" id="1_sxwmt"]
 [ext_resource type="Texture2D" uid="uid://bwevuvs5nnwfx" path="res://assets/image/ui/ui_challenge/Challenge_Background.jpg" id="2_eavpv"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cc56wstwe4f2m" path="res://scenes/character/plant/001_pea_shooter_single_static.tscn" id="8_ioowb"]
 [ext_resource type="PackedScene" uid="uid://d2tdv13tka3y6" path="res://FZB/ZW/ZJ_001_kp_dmsfss.tscn" id="8_wjudi"]
 [ext_resource type="Texture2D" uid="uid://bvp2j68muqgm8" path="res://assets/image/Almanac/Almanac_GroundNight.jpg" id="9_h4wm6"]
+[ext_resource type="PackedScene" uid="uid://dt51jro0ngstm" path="res://FZB/ZW/ZJ_002_kp_ygtdl.tscn" id="9_s7p66"]
 [ext_resource type="PackedScene" uid="uid://l2p51ejr4l2i" path="res://scenes/character/plant/009_puff_shroom_static.tscn" id="10_uoc1t"]
+[ext_resource type="PackedScene" uid="uid://bq634jugmkwml" path="res://FZB/ZW/zj_003_kp_ygzd.tscn" id="10_wd5ik"]
 [ext_resource type="Texture2D" uid="uid://xc3kqag3vqlq" path="res://assets/image/ui/ui_level/Almanac_CloseButton.png" id="11_cmtoa"]
 [ext_resource type="Texture2D" uid="uid://c82uuprowr5d" path="res://assets/image/ui/ui_level/Almanac_CloseButtonHighlight.png" id="12_frh3o"]
 [ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="13_x3tlm"]
@@ -115,6 +117,138 @@ offset_right = 105.0
 offset_bottom = 104.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "前院告急1-1"
+
+[node name="前院告急1-2" type="TextureRect" parent="BG/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_ej3ij")
+
+[node name="TextureButton" type="TextureButton" parent="BG/GridContainer/前院告急1-2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -60.0
+offset_right = 59.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_l4s0i")
+texture_pressed = ExtResource("5_loeyx")
+texture_focused = ExtResource("4_l4s0i")
+script = ExtResource("6_sxwmt")
+"主题关卡" = 2
+
+[node name="Panel" type="Panel" parent="BG/GridContainer/前院告急1-2/TextureButton"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 7.0
+offset_right = 40.0
+offset_bottom = 68.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="BG/GridContainer/前院告急1-2/TextureButton/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 145.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_moc8l")
+
+[node name="Label" type="Label" parent="BG/GridContainer/前院告急1-2/TextureButton"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 81.5
+offset_right = 105.0
+offset_bottom = 104.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "前院告急1-2"
+
+[node name="Node2D" parent="BG/GridContainer/前院告急1-2/TextureButton" instance=ExtResource("9_s7p66")]
+position = Vector2(58, 34)
+
+[node name="前院告急1-3" type="TextureRect" parent="BG/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_ej3ij")
+
+[node name="TextureButton" type="TextureButton" parent="BG/GridContainer/前院告急1-3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -60.0
+offset_right = 59.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_l4s0i")
+texture_pressed = ExtResource("5_loeyx")
+texture_focused = ExtResource("4_l4s0i")
+script = ExtResource("6_sxwmt")
+"主题关卡" = 3
+
+[node name="Panel" type="Panel" parent="BG/GridContainer/前院告急1-3/TextureButton"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 7.0
+offset_right = 40.0
+offset_bottom = 68.0
+grow_horizontal = 2
+pivot_offset = Vector2(41, 33.5)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="BG/GridContainer/前院告急1-3/TextureButton/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 145.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_moc8l")
+
+[node name="Label" type="Label" parent="BG/GridContainer/前院告急1-3/TextureButton"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 81.5
+offset_right = 105.0
+offset_bottom = 104.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "前院告急1-3"
+
+[node name="CherryBomb" parent="BG/GridContainer/前院告急1-3/TextureButton" instance=ExtResource("10_wd5ik")]
+position = Vector2(56, 38)
 
 [node name="TextureRect" type="TextureRect" parent="BG/GridContainer"]
 layout_mode = 2
@@ -287,14 +421,6 @@ texture = ExtResource("3_ej3ij")
 layout_mode = 2
 texture = ExtResource("3_ej3ij")
 
-[node name="TextureRect14" type="TextureRect" parent="BG/GridContainer"]
-layout_mode = 2
-texture = ExtResource("3_ej3ij")
-
-[node name="TextureRect15" type="TextureRect" parent="BG/GridContainer"]
-layout_mode = 2
-texture = ExtResource("3_ej3ij")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -348,6 +474,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="BG/GridContainer/前院告急1-1/TextureButton" to="BG/GridContainer/前院告急1-1/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="BG/GridContainer/前院告急1-2/TextureButton" to="BG/GridContainer/前院告急1-2/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="BG/GridContainer/前院告急1-3/TextureButton" to="BG/GridContainer/前院告急1-3/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="BG/GridContainer/TextureRect/TextureButton" to="BG/GridContainer/TextureRect/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="BG/GridContainer/TextureRect2/TextureButton2" to="BG/GridContainer/TextureRect2/TextureButton2" method="_on_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="back_start_menu"]

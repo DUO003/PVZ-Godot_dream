@@ -1,0 +1,395 @@
+[gd_scene load_steps=28 format=3 uid="uid://2gf1jkg7l5fo"]
+
+[ext_resource type="Script" uid="uid://yl15suu25hot" path="res://图鉴中转.gd" id="1_585sd"]
+[ext_resource type="Texture2D" uid="uid://bqant5mvxhv0i" path="res://assets/ZJ/images/Almanac_IndexBack.jpg" id="2_qmmql"]
+[ext_resource type="Texture2D" uid="uid://cg1t2404qcjjr" path="res://assets/放置版/睡觉做大梦.jpg" id="3_3iiuy"]
+[ext_resource type="Texture2D" uid="uid://cmrov4jx4pnva" path="res://assets/放置版/D003.jpg" id="4_bfkkq"]
+[ext_resource type="Texture2D" uid="uid://xbpjmoaoafx0" path="res://assets/ZJ/images/moneybag_hi_res.png" id="5_qmmql"]
+[ext_resource type="Texture2D" uid="uid://c41qwm3j1dftu" path="res://assets/ZJ/images/SeedChooser_Button.png" id="6_codl4"]
+[ext_resource type="Texture2D" uid="uid://bn7hsfi2tkdfo" path="res://assets/ZJ/images/SeedChooser_Button_Disabled.png" id="7_ry5d2"]
+[ext_resource type="Texture2D" uid="uid://dypqaytqbwwpy" path="res://assets/ZJ/images/button_down_left.png" id="8_5e01p"]
+[ext_resource type="Texture2D" uid="uid://bkbnaottxswol" path="res://assets/ZJ/images/button_down_middle.png" id="9_qv5ss"]
+[ext_resource type="Texture2D" uid="uid://cdgv60to0jhke" path="res://assets/ZJ/images/button_middle.png" id="10_n4m5d"]
+[ext_resource type="Texture2D" uid="uid://c56ojdjs0b0j0" path="res://assets/ZJ/images/button_down_right.png" id="11_adx4b"]
+[ext_resource type="Texture2D" uid="uid://sohmfhjwose4" path="res://assets/ZJ/new/PropAlmanac_button.png" id="12_dkkoe"]
+[ext_resource type="Texture2D" uid="uid://1rylx8gel24y" path="res://assets/ZJ/new/PropAlmanac_button2.png" id="13_4c36i"]
+[ext_resource type="Texture2D" uid="uid://b8y52hejx8ife" path="res://assets/ZJ/images/SelectorScreen_ZenGarden.png" id="14_rt8cm"]
+[ext_resource type="Texture2D" uid="uid://rrr6cpi4pygh" path="res://assets/ZJ/images/SelectorScreen_ZenGardenHighlight.png" id="15_56g40"]
+[ext_resource type="BitMap" uid="uid://c6dx0o3boywqr" path="res://assets/image/ui/ui_start_menu/SelectorScreen_ZenGarden_Mask.png" id="16_1ok3w"]
+[ext_resource type="Texture2D" uid="uid://c2c8vme6l7ly" path="res://assets/ZJ/new/Bag_button.png" id="17_dkkoe"]
+[ext_resource type="Texture2D" uid="uid://c58km4rulbqlg" path="res://assets/ZJ/new/bag_button2.png" id="18_4c36i"]
+[ext_resource type="BitMap" uid="uid://b2v23ag0er3mt" path="res://assets/ZJ/new/Bag_button3.png" id="19_rt8cm"]
+[ext_resource type="Texture2D" uid="uid://xsu0epbjdx8o" path="res://assets/image/ui/ui_start_menu/SelectorScreen_Store.png" id="20_56g40"]
+[ext_resource type="Texture2D" uid="uid://c7hm6tgjy1fbs" path="res://assets/image/ui/ui_start_menu/SelectorScreen_StoreHighlight.png" id="21_1ok3w"]
+[ext_resource type="BitMap" uid="uid://cra43htuprgvi" path="res://assets/image/ui/ui_start_menu/SelectorScreen_Store_Mask.png" id="22_66xuy"]
+[ext_resource type="PackedScene" uid="uid://cp0kgnsx20pyh" path="res://scenes/ui/dialog.tscn" id="23_rt8cm"]
+[ext_resource type="Script" uid="uid://boogycwje3tsq" path="res://FZB/场景/提示.gd" id="24_56g40"]
+[ext_resource type="Texture2D" uid="uid://xc3kqag3vqlq" path="res://assets/image/ui/ui_level/Almanac_CloseButton.png" id="25_66xuy"]
+[ext_resource type="Texture2D" uid="uid://c82uuprowr5d" path="res://assets/image/ui/ui_level/Almanac_CloseButtonHighlight.png" id="26_y4lwe"]
+[ext_resource type="BitMap" uid="uid://bc7yq02xscrlr" path="res://assets/image/ui/ui_level/Almanac_CloseButton_Mask.png" id="27_vfm3f"]
+
+[node name="图鉴中转" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_585sd")
+
+[node name="背景" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qmmql")
+
+[node name="开源声明" type="Label" parent="背景"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 321.0
+offset_top = -176.0
+offset_right = 507.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "放置版在giehub上开源"
+horizontal_alignment = 1
+
+[node name="植物实例" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 278.0
+offset_top = 275.0
+offset_right = 278.0
+offset_bottom = 275.0
+scale = Vector2(1.5, 1.5)
+
+[node name="僵尸实例" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 811.0
+offset_top = 278.0
+offset_right = 811.0
+offset_bottom = 278.0
+scale = Vector2(0.9, 0.9)
+
+[node name="睡觉做大梦" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 476.0
+offset_right = 426.0
+offset_bottom = 540.0
+texture_normal = ExtResource("3_3iiuy")
+texture_pressed = ExtResource("3_3iiuy")
+texture_hover = ExtResource("3_3iiuy")
+texture_disabled = ExtResource("3_3iiuy")
+texture_focused = ExtResource("3_3iiuy")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="名称" type="Label" parent="睡觉做大梦"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = 35.0
+offset_right = 46.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "睡觉做大梦"
+horizontal_alignment = 1
+
+[node name="版本" type="Label" parent="睡觉做大梦"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 62.0
+offset_right = 45.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "godot版"
+horizontal_alignment = 1
+
+[node name="D003" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 477.0
+offset_right = 719.0
+offset_bottom = 541.0
+texture_normal = ExtResource("4_bfkkq")
+texture_pressed = ExtResource("4_bfkkq")
+texture_hover = ExtResource("4_bfkkq")
+texture_disabled = ExtResource("4_bfkkq")
+texture_focused = ExtResource("4_bfkkq")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="名称" type="Label" parent="D003"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = 35.0
+offset_right = 46.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "多003"
+horizontal_alignment = 1
+
+[node name="版本" type="Label" parent="D003"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 62.0
+offset_right = 45.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "放置版"
+horizontal_alignment = 1
+
+[node name="伟伟迷" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 436.0
+offset_right = 605.0
+offset_bottom = 558.0
+texture_normal = ExtResource("5_qmmql")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="版本" type="Label" parent="伟伟迷"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 74.0
+offset_right = 45.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "杂交版"
+horizontal_alignment = 1
+
+[node name="查看植物" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 341.0
+offset_right = 356.0
+offset_bottom = 383.0
+texture_normal = ExtResource("6_codl4")
+texture_pressed = ExtResource("6_codl4")
+texture_hover = ExtResource("7_ry5d2")
+texture_disabled = ExtResource("6_codl4")
+texture_focused = ExtResource("6_codl4")
+
+[node name="文本" type="Label" parent="查看植物"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -11.5
+offset_right = 32.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.930285, 0.730942, 0.388986, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "查看植物"
+
+[node name="查看僵尸" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 333.0
+offset_right = 894.0
+offset_bottom = 375.0
+texture_normal = ExtResource("6_codl4")
+texture_pressed = ExtResource("6_codl4")
+texture_hover = ExtResource("7_ry5d2")
+texture_disabled = ExtResource("6_codl4")
+texture_focused = ExtResource("6_codl4")
+
+[node name="按钮部件1" type="Sprite2D" parent="查看僵尸"]
+position = Vector2(15, 23)
+texture = ExtResource("8_5e01p")
+
+[node name="按钮部件2" type="Sprite2D" parent="查看僵尸"]
+position = Vector2(55, 23)
+texture = ExtResource("9_qv5ss")
+
+[node name="按钮部件3" type="Sprite2D" parent="查看僵尸"]
+position = Vector2(101, 24)
+texture = ExtResource("10_n4m5d")
+
+[node name="按钮部件4" type="Sprite2D" parent="查看僵尸"]
+position = Vector2(141, 23)
+texture = ExtResource("11_adx4b")
+
+[node name="文本" type="Label" parent="查看僵尸"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -11.5
+offset_right = 32.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.333333, 0.729412, 0.227451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "查看僵尸"
+
+[node name="道具图鉴" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 461.0
+offset_right = 1042.0
+offset_bottom = 555.0
+texture_normal = ExtResource("12_dkkoe")
+texture_pressed = ExtResource("13_4c36i")
+texture_hover = ExtResource("12_dkkoe")
+texture_disabled = ExtResource("12_dkkoe")
+texture_focused = ExtResource("12_dkkoe")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="花园图鉴" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 439.0
+offset_right = 958.0
+offset_bottom = 589.0
+texture_normal = ExtResource("14_rt8cm")
+texture_pressed = ExtResource("15_56g40")
+texture_hover = ExtResource("14_rt8cm")
+texture_disabled = ExtResource("14_rt8cm")
+texture_focused = ExtResource("14_rt8cm")
+texture_click_mask = ExtResource("16_1ok3w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="背包" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 473.0
+offset_right = 167.0
+offset_bottom = 562.0
+scale = Vector2(0.935002, 0.935002)
+texture_normal = ExtResource("17_dkkoe")
+texture_pressed = ExtResource("18_4c36i")
+texture_hover = ExtResource("18_4c36i")
+texture_click_mask = ExtResource("19_rt8cm")
+
+[node name="商店" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 469.0
+offset_right = 291.0
+offset_bottom = 558.0
+scale = Vector2(0.899563, 0.90678)
+texture_normal = ExtResource("20_56g40")
+texture_pressed = ExtResource("21_1ok3w")
+texture_hover = ExtResource("21_1ok3w")
+texture_click_mask = ExtResource("22_66xuy")
+
+[node name="没做" parent="." instance=ExtResource("23_rt8cm")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -165.0
+offset_right = -184.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_56g40")
+
+[node name="Label" type="Label" parent="没做"]
+layout_mode = 1
+offset_left = 134.0
+offset_top = 128.0
+offset_right = 174.0
+offset_bottom = 151.0
+text = "没做"
+
+[node name="主菜单" type="TextureButton" parent="."]
+offset_left = 973.0
+offset_top = 567.0
+offset_right = 1062.0
+offset_bottom = 593.0
+texture_normal = ExtResource("25_66xuy")
+texture_pressed = ExtResource("26_y4lwe")
+texture_click_mask = ExtResource("27_vfm3f")
+
+[node name="Label" type="Label" parent="主菜单"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -10.0
+offset_right = 18.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "主菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="睡觉做大梦" to="." method="_打开B站" binds= [2]]
+[connection signal="pressed" from="D003" to="." method="_打开B站" binds= [1]]
+[connection signal="pressed" from="伟伟迷" to="." method="_打开B站" binds= [0]]
+[connection signal="pressed" from="查看植物" to="." method="_查看植物"]
+[connection signal="pressed" from="查看僵尸" to="." method="_没做"]
+[connection signal="pressed" from="道具图鉴" to="." method="_没做"]
+[connection signal="pressed" from="花园图鉴" to="." method="_没做"]
+[connection signal="pressed" from="背包" to="." method="_没做"]
+[connection signal="pressed" from="商店" to="." method="_没做"]
+[connection signal="pressed" from="主菜单" to="." method="_on_主菜单"]

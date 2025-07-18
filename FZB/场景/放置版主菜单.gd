@@ -54,3 +54,8 @@ func _on_full_screen_button_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func 图鉴() -> void:
+	get_tree().change_scene_to_file("res://FZB/场景/图鉴中转.tscn")
+	pass # Replace with function body.

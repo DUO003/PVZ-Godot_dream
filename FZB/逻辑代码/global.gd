@@ -41,89 +41,89 @@ enum CardInfoAttribute {
 
 var CardInfo = {
 	PlantType.PeaShooterSingle: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 100,
 		},
 	PlantType.SunFlower: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 50
 		},
 	PlantType.CherryBomb: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 50.0,
 		CardInfoAttribute.SunCost: 150
 		},
 	PlantType.WallNut: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 30.0,
 		CardInfoAttribute.SunCost: 50
 		},
 	PlantType.PotatoMine: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 30.0,
 		CardInfoAttribute.SunCost: 25
 		},
 	PlantType.SnowPea: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 175
 		},
 	PlantType.Chomper: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 150
 		},
 	PlantType.PeaShooterDouble: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 200
 		},
 	PlantType.PuffShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 0
 		},
 	PlantType.SunShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 25
 		},
-	PlantType.FumeShroom: {
-		CardInfoAttribute.CoolTime: 0.0,
+	PlantType.FumeShroom: {#大喷菇
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 75
 		},
-	PlantType.GraveBuster: {
-		CardInfoAttribute.CoolTime: 2.0,
+	PlantType.GraveBuster: {#墓碑吞噬者
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 75
 		},
-	PlantType.HypnoShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+	PlantType.HypnoShroom: {#魅惑菇
+		CardInfoAttribute.CoolTime: 30.0,
 		CardInfoAttribute.SunCost: 75
 		},
-	PlantType.ScaredyShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+	PlantType.ScaredyShroom: {#胆小菇
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 25
 		},
-	PlantType.IceShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+	PlantType.IceShroom: {#寒冰菇
+		CardInfoAttribute.CoolTime: 50.0,
 		CardInfoAttribute.SunCost: 75
 		},
 	PlantType.DoomShroom: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 50.0,
 		CardInfoAttribute.SunCost: 125
 		},
 	PlantType.ThreePeater: {
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 325
 		},
 	PlantType.dmsfss: {#带妹上分射手
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 7.5,
 		CardInfoAttribute.SunCost: 125,
 		CardInfoAttribute.能量: 25,
 		CardInfoAttribute.占用: 30,
 		CardInfoAttribute.类型: 1,
 		},
 	PlantType.ygtdl: {#阳光土豆雷
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 30.0,
 		CardInfoAttribute.SunCost: 0,
 		CardInfoAttribute.能量: 10,
 		CardInfoAttribute.占用: 30,
 		CardInfoAttribute.类型: 0,
 		},
 	PlantType.ygzd: {#阳光炸弹
-		CardInfoAttribute.CoolTime: 2.0,
+		CardInfoAttribute.CoolTime: 50.0,
 		CardInfoAttribute.SunCost: 200,
 		CardInfoAttribute.能量: 50,
 		CardInfoAttribute.占用: 80,

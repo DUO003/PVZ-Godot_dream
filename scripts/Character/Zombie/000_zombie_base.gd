@@ -485,7 +485,7 @@ func _head_fade():
 
 func 掉落金币():
 	# 50%概率掉落金币
-	if randf() < 1:
+	if randf() < 0.5:
 	# 加载并实例化金币场景
 		var 金币场景 = preload("res://FZB/场景/场景内道具/金币.tscn").instantiate()
 		掉落物节点.add_child(金币场景)
